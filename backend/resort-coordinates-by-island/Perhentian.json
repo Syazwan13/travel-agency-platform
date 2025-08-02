@@ -1,0 +1,2004 @@
+{
+  "island": "Perhentian",
+  "statistics": {
+    "totalResorts": 109,
+    "resortsWithValidCoordinates": 52,
+    "resortsWithoutValidCoordinates": 57,
+    "validCoordinatesPercentage": "47.7",
+    "sources": [
+      "resortlocations",
+      "amitravel",
+      "holidaygogogopackages",
+      "geocodecaches"
+    ]
+  },
+  "resorts": [
+    {
+      "name": "MIMPI Perhentian Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb28"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7432174,
+        5.9025828
+      ],
+      "longitude": 102.7432174,
+      "latitude": 5.9025828,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb29"
+    },
+    {
+      "name": "The Barat Perhentian",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb2a"
+    },
+    {
+      "name": "Coral View Island Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7396239,
+        5.902128
+      ],
+      "longitude": 102.7396239,
+      "latitude": 5.902128,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb2b"
+    },
+    {
+      "name": "Senja Bay Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7169061,
+        5.9122767
+      ],
+      "longitude": 102.7169061,
+      "latitude": 5.9122767,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb2c"
+    },
+    {
+      "name": "Ombak Dive Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7169863,
+        5.9150505
+      ],
+      "longitude": 102.7169863,
+      "latitude": 5.9150505,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb2d"
+    },
+    {
+      "name": "Shari-la Island Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7162544,
+        5.9152695
+      ],
+      "longitude": 102.7162544,
+      "latitude": 5.9152695,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb2e"
+    },
+    {
+      "name": "Cocohut Long Beach Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7205338,
+        5.9189479
+      ],
+      "longitude": 102.7205338,
+      "latitude": 5.9189479,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb2f"
+    },
+    {
+      "name": "Alunan Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7227115,
+        5.8951106
+      ],
+      "longitude": 102.7227115,
+      "latitude": 5.8951106,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb30"
+    },
+    {
+      "name": "Arwana Perhentian Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7508136,
+        5.8949915
+      ],
+      "longitude": 102.7508136,
+      "latitude": 5.8949915,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb31"
+    },
+    {
+      "name": "Flora Bay Chalet",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7460122,
+        5.8907596
+      ],
+      "longitude": 102.7460122,
+      "latitude": 5.8907596,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb32"
+    },
+    {
+      "name": "Samudra Beach Chalet",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7497951,
+        5.8939709
+      ],
+      "longitude": 102.7497951,
+      "latitude": 5.8939709,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb33"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb28",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb50"
+    },
+    {
+      "name": "Barat Beach Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb2a",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb53"
+    },
+    {
+      "name": "The Barat Beach Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb2a",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb56"
+    },
+    {
+      "name": "The Cocohut Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7205338,
+        5.9189479
+      ],
+      "longitude": 102.7205338,
+      "latitude": 5.9189479,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb2f",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb59"
+    },
+    {
+      "name": "Flora Bay Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7460122,
+        5.8907596
+      ],
+      "longitude": 102.7460122,
+      "latitude": 5.8907596,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb32",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb5c"
+    },
+    {
+      "name": "Alunan Resort , Kecil",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7227115,
+        5.8951106
+      ],
+      "longitude": 102.7227115,
+      "latitude": 5.8951106,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb30",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb5f"
+    },
+    {
+      "name": "Arwana Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7508136,
+        5.8949915
+      ],
+      "longitude": 102.7508136,
+      "latitude": 5.8949915,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb31",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb62"
+    },
+    {
+      "name": "Barat Tioman Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb2a",
+      "source": "resortlocations",
+      "_id": "68742fadebfeb2acbee3fb71"
+    },
+    {
+      "name": "Coral View Island Resort",
+      "packageTitle": "3D2N Coral View Island Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Coral View Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 500",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-coral-view-island-resort-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1bb"
+    },
+    {
+      "name": "Senja Bay Resort",
+      "packageTitle": "3D2N Senja Bay Resort (Fullboard Snorkeling Package), Pulau Perhentian",
+      "resort": "Senja Bay Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 230",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-senja-bay-resort-fullboard-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1bc"
+    },
+    {
+      "name": "Arwana Resort",
+      "packageTitle": "2D1N Arwana Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Arwana Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 408",
+      "duration": "2D1N",
+      "link": "https://www.amitravel.my/package-pakej/2d1n-arwana-resort-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1bd"
+    },
+    {
+      "name": "Resort",
+      "packageTitle": "3D2N Perhentian Island Resort (Honeymoon), Pulau Perhentian",
+      "resort": "Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 2388",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-perhentian-island-resort-honeymoon-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1be"
+    },
+    {
+      "name": "Resort",
+      "packageTitle": "3D2N Perhentian Island Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 678",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-fb-snorkeling-perhentian-island/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1bf"
+    },
+    {
+      "name": "Resort",
+      "packageTitle": "3D2N Perhentian Island Resort (Diving Package), Pulau Perhentian",
+      "resort": "Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 792",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-diving-perhentian-island-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c0"
+    },
+    {
+      "name": "Discovery Resort",
+      "packageTitle": "3D2N Discovery Perhentian Island Resort, Pulau Perhentian",
+      "resort": "Discovery Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 582",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-discovery-perhentian-island-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c1"
+    },
+    {
+      "name": "Ombak Dive Resort",
+      "packageTitle": "4D3N Relax at Ombak Dive Resort, Pulau Perhentian",
+      "resort": "Ombak Dive Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 810",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-relax-ombak-dive-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c2"
+    },
+    {
+      "name": "Senja Bay Resort",
+      "packageTitle": "3D2N Senja Bay Resort (Relaxing Package), Pulau Perhentian",
+      "resort": "Senja Bay Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 264",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-senja-bay-resort-relaxing-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c3"
+    },
+    {
+      "name": "Senja Bay Resort",
+      "packageTitle": "3D2N Senja Bay Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Senja Bay Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 324",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-senja-bay-resort-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c4"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "3D2N Mimpi Perhentian Resort (Diving Package), Pulau Perhentian",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1524",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-diving-package-with-mimpi-perhentian-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c5"
+    },
+    {
+      "name": "Perhentian",
+      "packageTitle": "3D2N The Barat Perhentian (Full Board & 3 Dives), Pulau Perhentian",
+      "resort": "Perhentian",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 632",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-the-barat-perhentian-full-board-3-dives-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c6"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "3D2N Mimpi Perhentian Resort (Free & Easy), Pulau Perhentian",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 450",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-mimpi-perhentian-resort-honeymoon-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c7"
+    },
+    {
+      "name": "Perhentian",
+      "packageTitle": "4D3N The Barat Perhentian (Snorkeling Package), Pulau Perhentian",
+      "resort": "Perhentian",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 618",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-the-barat-perhentian-snorkeling-package-pulau-perhentian-2/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c8"
+    },
+    {
+      "name": "Perhentian",
+      "packageTitle": "4D3N The Barat Perhentian (Full Board & 6 Dives), Pulau Perhentian",
+      "resort": "Perhentian",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1104",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-the-barat-perhentian-full-board-6-dives-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1c9"
+    },
+    {
+      "name": "Perhentian",
+      "packageTitle": "4D3N The Barat Perhentian (Full Board & Open Water Course), Pulau Perhentian",
+      "resort": "Perhentian",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1925",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-the-barat-perhentian-full-board-open-water-course-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1ca"
+    },
+    {
+      "name": "Perhentian",
+      "packageTitle": "3D2N The Barat Perhentian (Snorkeling Package), Pulau Perhentian",
+      "resort": "Perhentian",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 438",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-the-barat-perhentian-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1cb"
+    },
+    {
+      "name": "Senja Bay Resort",
+      "packageTitle": "4D3N Senja Bay Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Senja Bay Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 684",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-senja-bay-resort-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1cc"
+    },
+    {
+      "name": "Samudra Beach Chalet",
+      "packageTitle": "4D3N Samudra Beach Chalet (Snorkeling 3 Islands Package – Perhentian, Rawa & Susu Dara), Pulau Perhentian",
+      "resort": "Samudra Beach Chalet",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 540",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-samudra-beach-chalet-snorkeling-3-islands-package-perhentian-rawa-susu-dara-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1cd"
+    },
+    {
+      "name": "Samudra Beach Chalet",
+      "packageTitle": "3D2N Samudra Beach Chalet (Snorkeling Package), Pulau Perhentian",
+      "resort": "Samudra Beach Chalet",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 360",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-samudra-beach-chalet-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1ce"
+    },
+    {
+      "name": "Samudra Beach Chalet",
+      "packageTitle": "3D2N Samudra Beach Chalet (Snorkeling 3 Islands Package – Perhentian, Redang & Lang Tengah), Pulau Perhentian (Min 6 pax)",
+      "resort": "Samudra Beach Chalet",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 456",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-samudra-beach-chalet-snorkeling-3-islands-package-perhentian-redang-lang-tengah-pulau-perhentian-min-6-pax/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1cf"
+    },
+    {
+      "name": "Samudra Beach Chalet",
+      "packageTitle": "3D2N Samudra Beach Chalet (Snorkeling 3 Islands Package – Perhentian, Rawa & Susu Dara), Pulau Perhentian (Min 4 pax)",
+      "resort": "Samudra Beach Chalet",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 420",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-samudra-beach-chalet-snorkeling-3-islands-package-perhentian-rawa-susu-dara-pulau-perhentian-min-4-pax/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d0"
+    },
+    {
+      "name": "The Cocohut Resort",
+      "packageTitle": "3D2N Discovery Package at The Cocohut Resort Pulau Perhentian",
+      "resort": "The Cocohut Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 492",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3-days-2-nights-cocohut-resort-cozy-chalet-early-bird-promotion-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d1"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "3D2N Mimpi Perhentian Resort (Honeymoon), Pulau Perhentian",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1588",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-mimpi-perhentian-resort-honeymoon-pulau-perhentian-2/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d2"
+    },
+    {
+      "name": "The Cocohut Resort",
+      "packageTitle": "4D3N Discovery Package at The Cocohut Resort, Pulau Perhentian",
+      "resort": "The Cocohut Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 708",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4-days-3-night-cocohut-resort-cozy-chalet-early-bird-promotion-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d3"
+    },
+    {
+      "name": "Bubu Long Beach Resort",
+      "packageTitle": "3D2N Bubu Long Beach Resort, Pulau Perhentian",
+      "resort": "Bubu Long Beach Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1260",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3-days-2-night-bubu-long-beach-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d4"
+    },
+    {
+      "name": "Shari-La Island Resort",
+      "packageTitle": "3D2N Shari-La Island Resort, Pulau Perhentian",
+      "resort": "Shari-La Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 396",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-free-easy-package-shari-la-island-resort/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d5"
+    },
+    {
+      "name": "Paradise at Bubu Resort",
+      "packageTitle": "3D2N Romance In Paradise at Bubu Resort, Pulau Perhentian",
+      "resort": "Paradise at Bubu Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 2880",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-romance-paradise-bubu-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d6"
+    },
+    {
+      "name": "Cozy Chalet",
+      "packageTitle": "3D2N Discovery Package at Cozy Chalet, Pulau Perhentian",
+      "resort": "Cozy Chalet",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 492",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-discovery-package-at-cozy-chalet-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d7"
+    },
+    {
+      "name": "Ombak Dive Resort",
+      "packageTitle": "3D2N Chillax at Ombak Dive Resort, Pulau Perhentian",
+      "resort": "Ombak Dive Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 552",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-relax-ombak-dive-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d8"
+    },
+    {
+      "name": "Barat Perhentian Beach Resort",
+      "packageTitle": "4D3N Open Water Dive Course (PADI) at Barat Perhentian Beach Resort, Pulau Perhentian",
+      "resort": "Barat Perhentian Beach Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1730",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-open-water-dive-course-padi-at-barat-perhentian-beach-resort/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1d9"
+    },
+    {
+      "name": "Arwana Perhentian Eco Resort",
+      "packageTitle": "3D2N Honeymoon at Arwana Perhentian Eco Resort, Pulau Perhentian",
+      "resort": "Arwana Perhentian Eco Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 888",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-honeymoon-arwana-perhentian-eco-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1da"
+    },
+    {
+      "name": "Alunan Resort , Kecil",
+      "packageTitle": "3D2N Alunan Resort (Honeymoon Package), Pulau Perhentian Kecil",
+      "resort": "Alunan Resort , Kecil",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1566",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-alunan-resort-honeymoon-package-pulau-perhentian-kecil/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1db"
+    },
+    {
+      "name": "The Cocohut Resort",
+      "packageTitle": "2D1N Snorkeling Package at The Cocohut Resort, Pulau Perhentian",
+      "resort": "The Cocohut Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 288",
+      "duration": "2D1N",
+      "link": "https://www.amitravel.my/package-pakej/2d1n-snorkeling-package-at-the-cocohut-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1dc"
+    },
+    {
+      "name": "Mimpi Perhentian Resort With Open Water Diver Course",
+      "packageTitle": "5D4N Mimpi Perhentian Resort With Open Water Diver Course (PADI), Pulau Perhentian",
+      "resort": "Mimpi Perhentian Resort With Open Water Diver Course",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 2910",
+      "duration": "5D4N",
+      "link": "https://www.amitravel.my/package-pakej/5d4n-open-water-diver-course-padi-with-mimpi-perhentian-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1dd"
+    },
+    {
+      "name": "Shari-La Island Resort",
+      "packageTitle": "3D2N Snorkeling Package at Shari-La Island Resort, Pulau Perhentian",
+      "resort": "Shari-La Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 540",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-snorkeling-package-shari-la-island-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1de"
+    },
+    {
+      "name": "Flora Bay Resort",
+      "packageTitle": "3D2N Snorkeling package at Flora Bay Resort, Pulau Perhentian (Min 4)",
+      "resort": "Flora Bay Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 438",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-snorkeling-package-flora-bay-resort-pulau-perhentian-min-8/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1df"
+    },
+    {
+      "name": "Flora Bay Resort",
+      "packageTitle": "2D1N Snorkeling Package at Flora Bay Resort, Pulau Perhentian (Min 4)",
+      "resort": "Flora Bay Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 246",
+      "duration": "2D1N",
+      "link": "https://www.amitravel.my/package-pakej/2d1n-snorkeling-package-min-8-flora-bay-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e0"
+    },
+    {
+      "name": "Ombak Dive Resort",
+      "packageTitle": "4D3N Snorkeling Package at Ombak Dive Resort, Pulau Perhentian",
+      "resort": "Ombak Dive Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 918",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-snorkeling-package-ombak-dive-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e1"
+    },
+    {
+      "name": "Ombak Dive Resort",
+      "packageTitle": "3D2N Snorkeling Package at Ombak Dive Resort, Pulau Perhentian",
+      "resort": "Ombak Dive Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 660",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-snorkeling-package-ombak-dive-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e2"
+    },
+    {
+      "name": "5 Points , Terengganu – Turtle Beach, Turtle Point, Teluk Keke, Shark Point & Air Berani",
+      "packageTitle": "5 Points Pulau Perhentian, Terengganu (Snorkeling & Island Hopping) – Turtle Beach, Turtle Point, Teluk Keke, Shark Point & Air Berani",
+      "resort": "5 Points , Terengganu – Turtle Beach, Turtle Point, Teluk Keke, Shark Point & Air Berani",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 120",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/5-points-pulau-perhentian-terengganu-snorkeling-island-hopping-turtle-beach-turtle-point-teluk-keke-shark-point-air-berani/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e3"
+    },
+    {
+      "name": "Ayah Hostel",
+      "packageTitle": "3D2N / 2D1N Snorkeling Package at Ayah Hostel, Pulau Perhentian Kecil (Kampung Nelayan)",
+      "resort": "Ayah Hostel",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 222",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-2d1n-snorkeling-package-at-ayah-hostel-pulau-perhentian-kecil-kampung-nelayan/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e4"
+    },
+    {
+      "name": "6",
+      "packageTitle": "3D2N / 2D1N D Rock Garden Resort, Pulau Perhentian (Snorkeling at Rawa & Perhentian Island) – Min 6",
+      "resort": "6",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 386",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-2d1n-d-rock-garden-resort-pulau-perhentian-snorkeling-at-rawa-perhentian-island-min-6/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e5"
+    },
+    {
+      "name": "6",
+      "packageTitle": "3D2N / 2D1N Mentari Save Park, Pulau Perhentian (Snorkeling at Rawa & Perhentian Island) – Min 6",
+      "resort": "6",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 224",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-2d1n-mentari-save-park-pulau-perhentian-snorkeling-at-rawa-perhentian-island-min-6/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e6"
+    },
+    {
+      "name": "Alunan Resort , Kecil",
+      "packageTitle": "3D2N Alunan Resort (Snorkeling Package), Pulau Perhentian Kecil",
+      "resort": "Alunan Resort , Kecil",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 822",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-alunan-resort-snorkeling-package-pulau-perhentian-kecil/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e7"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "3D2N Mimpi Perhentian Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1020",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-mimpi-perhentian-resort-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e8"
+    },
+    {
+      "name": "6",
+      "packageTitle": "3D2N / 2D1N Perhentian Damia, Pulau Perhentian (Snorkeling at Rawa & Perhentian Island) – Min 6",
+      "resort": "6",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 204",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-2d1n-perhentian-damia-pulau-perhentian-snorkeling-at-rawa-perhentian-island-min-6/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1e9"
+    },
+    {
+      "name": "6",
+      "packageTitle": "3D2N / 2D1N  Villamas Perhentian Resort, Pulau Perhentian (Snorkeling at Rawa & Perhentian Island) – Min 6",
+      "resort": "6",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 283",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-2d1n-villamas-perhentian-resort-pulau-perhentian-snorkeling-at-rawa-perhentian-island-min-6/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1ea"
+    },
+    {
+      "name": "6",
+      "packageTitle": "3D2N / 2D1N  Ombak Resort, Pulau Perhentian (Snorkeling at Rawa & Perhentian Island) – Min 6",
+      "resort": "6",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 400",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-2d1n-ombak-resort-pulau-perhentian-snorkeling-at-rawa-perhentian-island-min-6/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1eb"
+    },
+    {
+      "name": "6",
+      "packageTitle": "3D2N / 2D1N Murai Guesthouse, Pulau Perhentian (Snorkeling at Rawa & Perhentian Island) – Min 6",
+      "resort": "6",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 209",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-2d1n-murai-guesthouse-pulau-perhentian-snorkeling-at-rawa-perhentian-island-min-6/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1ec"
+    },
+    {
+      "name": "Alunan Resort , Kecil",
+      "packageTitle": "4D3N Alunan Resort (Snorkeling Package), Pulau Perhentian Kecil",
+      "resort": "Alunan Resort , Kecil",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1234",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-alunan-resort-snorkeling-package-pulau-perhentian-kecil/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1ed"
+    },
+    {
+      "name": "The Barat Perhentian",
+      "packageTitle": "4D3N Diving Package at The Barat Perhentian, Pulau Perhentian",
+      "resort": "The Barat Perhentian",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 978",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-diving-package-barat-perhentian-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1ee"
+    },
+    {
+      "name": "Ombak Dive Resort",
+      "packageTitle": "3D2N Scuba Diving Package at Ombak Dive Resort, Pulau Perhentian",
+      "resort": "Ombak Dive Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 792",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-scuba-diving-package-ombak-dive-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1ef"
+    },
+    {
+      "name": "Coral View Island Resort",
+      "packageTitle": "2D1N Coral View Island Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Coral View Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 315",
+      "duration": "2D1N",
+      "link": "https://www.amitravel.my/package-pakej/2d1n-coral-view-island-resort-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1f0"
+    },
+    {
+      "name": "Coral View Island Resort",
+      "packageTitle": "4D3N Coral View Island Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Coral View Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 685",
+      "duration": "4D3N",
+      "link": "https://www.amitravel.my/package-pakej/4d3n-coral-view-island-resort-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1f1"
+    },
+    {
+      "name": "Bubu Resort Long Beach",
+      "packageTitle": "3D2N Bubu Resort Long Beach (Snorkeling Package), Pulau Perhentian",
+      "resort": "Bubu Resort Long Beach",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 1600",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-bubu-resort-long-beach-snorkeling-package-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1f2"
+    },
+    {
+      "name": "Arwana Resort",
+      "packageTitle": "3D2N Arwana Resort (Snorkeling Package), Pulau Perhentian",
+      "resort": "Arwana Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "coordinates": [
+        0,
+        0
+      ],
+      "longitude": 0,
+      "latitude": 0,
+      "hasValidCoordinates": false,
+      "price": "RM 683",
+      "duration": "3D2N",
+      "link": "https://www.amitravel.my/package-pakej/3d2n-nature-explore-arwana-resort-pulau-perhentian/",
+      "source": "amitravel",
+      "_id": "688a5fc37c595c9dfac6a1f3"
+    },
+    {
+      "name": "Coral View Island Resort",
+      "packageTitle": "(2025 Promo) 2d1n Perhentian Coral View Island Resort Snorkeling Package",
+      "resort": "Coral View Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.7235,
+        5.8968
+      ],
+      "longitude": 102.7235,
+      "latitude": 5.8968,
+      "hasValidCoordinates": true,
+      "price": "RM 342",
+      "link": "https://www.holidaygogogo.com/2d1n-perhentian-coral-view-island-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253a8"
+    },
+    {
+      "name": "Coral View Island Resort",
+      "packageTitle": "(2025 Promo) 4d3n Perhentian Coral View Island Resort Snorkeling Package",
+      "resort": "Coral View Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.7235,
+        5.8968
+      ],
+      "longitude": 102.7235,
+      "latitude": 5.8968,
+      "hasValidCoordinates": true,
+      "price": "RM 737",
+      "link": "https://www.holidaygogogo.com/4d3n-perhentian-coral-view-island-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253a9"
+    },
+    {
+      "name": "Perhentian Coral View Island Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Coral View Island Resort Snorkeling Package",
+      "resort": "Perhentian Coral View Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.7235,
+        5.8968
+      ],
+      "longitude": 102.7235,
+      "latitude": 5.8968,
+      "hasValidCoordinates": true,
+      "price": "RM 555",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-coral-view-island-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253aa"
+    },
+    {
+      "name": "The Barat Beach Resort",
+      "packageTitle": "(2025 Promo) 3d2n Barat Perhentian Resort Snorkeling Package",
+      "resort": "The Barat Beach Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.719234,
+        5.918765
+      ],
+      "longitude": 102.719234,
+      "latitude": 5.918765,
+      "hasValidCoordinates": true,
+      "price": "RM 443",
+      "link": "https://www.holidaygogogo.com/3d2n-the-barat-beach-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253ab"
+    },
+    {
+      "name": "The Barat Beach Resort",
+      "packageTitle": "(2025 Promo) 4d3n Barat Perhentian Resort Snorkeling Package",
+      "resort": "The Barat Beach Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.719234,
+        5.918765
+      ],
+      "longitude": 102.719234,
+      "latitude": 5.918765,
+      "hasValidCoordinates": true,
+      "price": "RM 593",
+      "link": "https://www.holidaygogogo.com/4d3n-the-barat-beach-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253ac"
+    },
+    {
+      "name": "The Barat Beach Resort",
+      "packageTitle": "(2025 Promo) 3d2n Barat Perhentian Resort Diving Package",
+      "resort": "The Barat Beach Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.719234,
+        5.918765
+      ],
+      "longitude": 102.719234,
+      "latitude": 5.918765,
+      "hasValidCoordinates": true,
+      "price": "RM 614",
+      "link": "https://www.holidaygogogo.com/3d2n-the-barat-perhentian-beach-resort-diving-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253ad"
+    },
+    {
+      "name": "The Barat Beach Resort",
+      "packageTitle": "(2025 Promo) 4d3n Barat Perhentian Resort Diving Package",
+      "resort": "The Barat Beach Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.719234,
+        5.918765
+      ],
+      "longitude": 102.719234,
+      "latitude": 5.918765,
+      "hasValidCoordinates": true,
+      "price": "RM 1,034",
+      "link": "https://www.holidaygogogo.com/4d3n-the-barat-perhentian-beach-resort-diving-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253ae"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Island Resort (PIR) Snorkeling Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 635",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-full-board-snorkeling-package-perhentian-island-resort/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253af"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 4d3n Perhentian Island Resort (PIR) Snorkeling Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 870",
+      "link": "https://www.holidaygogogo.com/4d3n-perhentian-island-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b0"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Island Resort Discovery Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 575",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-island-resort-discovery-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b1"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 4d3n Perhentian Island Resort Discovery Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 805",
+      "link": "https://www.holidaygogogo.com/4d3n-perhentian-island-resort-discovery-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b2"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Island Resort (PIR) Honeymoon Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 1,045",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-island-resort-pir-honeymoon-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b3"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 4d3n Perhentian Island Resort (PIR) Honeymoon Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 1,377",
+      "link": "https://www.holidaygogogo.com/4d3n-perhentian-island-resort-pir-honeymoon-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b4"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Island Resort Fun Diving Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 780",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-half-board-diving-package-perhentian-island-resort/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b5"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 3D2N Perhentian, Lang Tengah & Redang Island Tour Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 695",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-island-resort-free-easy-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b6"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Island Resort Teambuilding Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 680",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-island-resort-teambuilding-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b7"
+    },
+    {
+      "name": "Perhentian Island Resort",
+      "packageTitle": "(HRDC) 3D2N Perhentian Island Resort Teambuilding Tour Package",
+      "resort": "Perhentian Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.743217,
+        5.902583
+      ],
+      "longitude": 102.743217,
+      "latitude": 5.902583,
+      "hasValidCoordinates": true,
+      "price": "RM 1,325",
+      "link": "https://www.holidaygogogo.com/hrdc-3d2n-perhentian-island-resort-teambuilding-tour-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b8"
+    },
+    {
+      "name": "Perhentian Shari-La Island Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Shari-La Island Resort Snorkeling Package",
+      "resort": "Perhentian Shari-La Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.720456,
+        5.920123
+      ],
+      "longitude": 102.720456,
+      "latitude": 5.920123,
+      "hasValidCoordinates": true,
+      "price": "RM 465",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-full-board-snorkeling-package-shari-la-island-resort/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253b9"
+    },
+    {
+      "name": "Shari-La Island Resort",
+      "packageTitle": "(2025 Promo) 4D3N Perhentian Shari-La Island Resort Snorkeling Package",
+      "resort": "Shari-La Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.720456,
+        5.920123
+      ],
+      "longitude": 102.720456,
+      "latitude": 5.920123,
+      "hasValidCoordinates": true,
+      "price": "RM 647",
+      "link": "https://www.holidaygogogo.com/4d3n-perhentian-shari-la-island-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253ba"
+    },
+    {
+      "name": "Shari-La Island Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Shari-La Island Resort Free & Easy Package",
+      "resort": "Shari-La Island Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.720456,
+        5.920123
+      ],
+      "longitude": 102.720456,
+      "latitude": 5.920123,
+      "hasValidCoordinates": true,
+      "price": "RM 345",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-shari-la-island-resort-free-easy-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253bb"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "(CNY LIMITED OFFER!) 3d2n Mimpi Perhentian Resort, Snorkeling Paradise Package",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.723002,
+        5.921459
+      ],
+      "longitude": 102.723002,
+      "latitude": 5.921459,
+      "hasValidCoordinates": true,
+      "price": "RM 888",
+      "link": "https://www.holidaygogogo.com/3d2n-mimpi-perhentian-half-board-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253bc"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "(2025 Promo) 3d2n Mimpi Perhentian Resort Exploration Package",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.723002,
+        5.921459
+      ],
+      "longitude": 102.723002,
+      "latitude": 5.921459,
+      "hasValidCoordinates": true,
+      "price": "RM 1,130",
+      "link": "https://www.holidaygogogo.com/3d2n-mimpi-perhentian-resort-exploration-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253bd"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "(2025 Promo) 4D3N Mimpi Perhentian Resort Exploration Package",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.723002,
+        5.921459
+      ],
+      "longitude": 102.723002,
+      "latitude": 5.921459,
+      "hasValidCoordinates": true,
+      "price": "RM 1,570",
+      "link": "https://www.holidaygogogo.com/4d3n-mimpi-perhentian-resort-exploration-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253be"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "(2025 Promo) 3d2n Mimpi Perhentian Resort Honeymoon Package",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.723002,
+        5.921459
+      ],
+      "longitude": 102.723002,
+      "latitude": 5.921459,
+      "hasValidCoordinates": true,
+      "price": "RM 1,700",
+      "link": "https://www.holidaygogogo.com/3d2n-mimpi-perhentian-resort-honeymoon-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253bf"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "(2025 Promo) 3D2N Mimpi Perhentian Resort Free & Easy Package",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.723002,
+        5.921459
+      ],
+      "longitude": 102.723002,
+      "latitude": 5.921459,
+      "hasValidCoordinates": true,
+      "price": "RM 1,050",
+      "link": "https://www.holidaygogogo.com/mimpi-perhentian-resort-room-boat-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253c0"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "(2025 Promo) 3D2N Mimpi Perhentian Resort Fun Dives Package",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.723002,
+        5.921459
+      ],
+      "longitude": 102.723002,
+      "latitude": 5.921459,
+      "hasValidCoordinates": true,
+      "price": "RM 1,450",
+      "link": "https://www.holidaygogogo.com/3d2n-mimpi-perhentian-resort-fun-dives-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253c1"
+    },
+    {
+      "name": "Mimpi Perhentian Resort",
+      "packageTitle": "(HRDC) 3D2N Mimpi Perhentian Resort Teambuilding Tour Package",
+      "resort": "Mimpi Perhentian Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.723002,
+        5.921459
+      ],
+      "longitude": 102.723002,
+      "latitude": 5.921459,
+      "hasValidCoordinates": true,
+      "price": "RM 2,000",
+      "link": "https://www.holidaygogogo.com/hrdc-3d2n-mimpi-perhentian-resort-teambuilding-tour-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253c2"
+    },
+    {
+      "name": "Senja Bay Resort",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Senja Bay Resort Snorkelling Package",
+      "resort": "Senja Bay Resort",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.716906,
+        5.912277
+      ],
+      "longitude": 102.716906,
+      "latitude": 5.912277,
+      "hasValidCoordinates": true,
+      "price": "RM 561",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-snorkelling-package-senja-bay-resort/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253c3"
+    },
+    {
+      "name": "Samudra Beach Chalet",
+      "packageTitle": "(2025 Promo) 3d2n Perhentian Samudra Beach Chalet Snorkeling Package",
+      "resort": "Samudra Beach Chalet",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.749794,
+        5.893967
+      ],
+      "longitude": 102.749794,
+      "latitude": 5.893967,
+      "hasValidCoordinates": true,
+      "price": "RM 330",
+      "link": "https://www.holidaygogogo.com/3d2n-perhentian-samudra-beach-chalet-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253c4"
+    },
+    {
+      "name": "Samudra Beach Chalet",
+      "packageTitle": "(2025 Promo) 2d1n Perhentian Samudra Beach Chalet Snorkeling Package",
+      "resort": "Samudra Beach Chalet",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.749794,
+        5.893967
+      ],
+      "longitude": 102.749794,
+      "latitude": 5.893967,
+      "hasValidCoordinates": true,
+      "price": "RM 230",
+      "link": "https://www.holidaygogogo.com/perhentian-samudra-beach-room-boat-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253c5"
+    },
+    {
+      "name": "Samudra Beach Chalet",
+      "packageTitle": "(2025 Promo) 4D3N Perhentian Samudra Beach Chalet Rawa + Susu Dara Snorkeling Package",
+      "resort": "Samudra Beach Chalet",
+      "island": "Perhentian",
+      "destination": "Perhentian",
+      "locationName": "",
+      "coordinates": [
+        102.749794,
+        5.893967
+      ],
+      "longitude": 102.749794,
+      "latitude": 5.893967,
+      "hasValidCoordinates": true,
+      "price": "RM 500",
+      "link": "https://www.holidaygogogo.com/4d3n-perhentian-samudra-beach-chalet-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "68742857ab98b9d9f97253c6"
+    },
+    {
+      "name": "The Barat Beach Resort",
+      "resortName": "The Barat Beach Resort",
+      "island": "Perhentian",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:50.794Z",
+      "source": "geocodecaches",
+      "_id": "686415e9a1292cd684f09250"
+    }
+  ]
+}

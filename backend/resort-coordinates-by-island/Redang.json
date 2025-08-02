@@ -1,0 +1,628 @@
+{
+  "island": "Redang",
+  "statistics": {
+    "totalResorts": 35,
+    "resortsWithValidCoordinates": 35,
+    "resortsWithoutValidCoordinates": 0,
+    "validCoordinatesPercentage": "100.0",
+    "sources": [
+      "resortlocations",
+      "holidaygogogopackages"
+    ]
+  },
+  "resorts": [
+    {
+      "name": "The Taaras Beach & Spa Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0143661,
+        5.7846899
+      ],
+      "longitude": 103.0143661,
+      "latitude": 5.7846899,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb20"
+    },
+    {
+      "name": "Laguna Redang Island Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0324755,
+        5.7706768
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.7706768,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb21"
+    },
+    {
+      "name": "Redang Beach Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0330102,
+        5.7722646
+      ],
+      "longitude": 103.0330102,
+      "latitude": 5.7722646,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb22"
+    },
+    {
+      "name": "Coral Redang Island Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0327967,
+        5.7759144
+      ],
+      "longitude": 103.0327967,
+      "latitude": 5.7759144,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb23"
+    },
+    {
+      "name": "Redang Bay Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0333031,
+        5.7737296
+      ],
+      "longitude": 103.0333031,
+      "latitude": 5.7737296,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb24"
+    },
+    {
+      "name": "Redang Holiday Beach Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0338177,
+        5.7778407
+      ],
+      "longitude": 103.0338177,
+      "latitude": 5.7778407,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb25"
+    },
+    {
+      "name": "Redang Reef Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0337291,
+        5.7695547
+      ],
+      "longitude": 103.0337291,
+      "latitude": 5.7695547,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb26"
+    },
+    {
+      "name": "Sari Pacifica Resort & Spa Redang Island",
+      "island": "Redang",
+      "coordinates": [
+        103.0327148,
+        5.77634
+      ],
+      "longitude": 103.0327148,
+      "latitude": 5.77634,
+      "hasValidCoordinates": true,
+      "isAlias": false,
+      "originalResort": null,
+      "source": "resortlocations",
+      "_id": "68742fabebfeb2acbee3fb27"
+    },
+    {
+      "name": "Taaras Beach Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0143661,
+        5.7846899
+      ],
+      "longitude": 103.0143661,
+      "latitude": 5.7846899,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb20",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb41"
+    },
+    {
+      "name": "Laguna Redang Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0324755,
+        5.7706768
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.7706768,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb21",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb44"
+    },
+    {
+      "name": "Coral Resort",
+      "island": "Redang",
+      "coordinates": [
+        103.0327967,
+        5.7759144
+      ],
+      "longitude": 103.0327967,
+      "latitude": 5.7759144,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb23",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb47"
+    },
+    {
+      "name": "Redang Holiday Beach Villa",
+      "island": "Redang",
+      "coordinates": [
+        103.0338177,
+        5.7778407
+      ],
+      "longitude": 103.0338177,
+      "latitude": 5.7778407,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb25",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb4a"
+    },
+    {
+      "name": "Sari Pacifica Beach Resort & Spa",
+      "island": "Redang",
+      "coordinates": [
+        103.0327148,
+        5.77634
+      ],
+      "longitude": 103.0327148,
+      "latitude": 5.77634,
+      "hasValidCoordinates": true,
+      "isAlias": true,
+      "originalResort": "68742fabebfeb2acbee3fb27",
+      "source": "resortlocations",
+      "_id": "68742facebfeb2acbee3fb4d"
+    },
+    {
+      "name": "Redang Laguna Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Laguna Resort Snorkeling Package",
+      "resort": "Redang Laguna Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.032145,
+        5.771234
+      ],
+      "longitude": 103.032145,
+      "latitude": 5.771234,
+      "hasValidCoordinates": true,
+      "price": "RM 528",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-snorkeling-package-redang-laguna/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972538c"
+    },
+    {
+      "name": "Laguna Redang Resort",
+      "packageTitle": "(2025 Promo) 2d1n Redang Laguna Resort Snorkeling Package",
+      "resort": "Laguna Redang Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.032476,
+        5.770677
+      ],
+      "longitude": 103.032476,
+      "latitude": 5.770677,
+      "hasValidCoordinates": true,
+      "price": "RM 388",
+      "link": "https://www.holidaygogogo.com/2d1n-redang-laguna-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972538d"
+    },
+    {
+      "name": "Laguna Redang Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Laguna Resort Scuba Diving Package",
+      "resort": "Laguna Redang Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.032476,
+        5.770677
+      ],
+      "longitude": 103.032476,
+      "latitude": 5.770677,
+      "hasValidCoordinates": true,
+      "price": "RM 908",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-diving-package-redang-laguna/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972538e"
+    },
+    {
+      "name": "Laguna Redang Resort",
+      "packageTitle": "(2025 Promo) 4d3n Redang Laguna Resort Snorkeling Package",
+      "resort": "Laguna Redang Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.032476,
+        5.770677
+      ],
+      "longitude": 103.032476,
+      "latitude": 5.770677,
+      "hasValidCoordinates": true,
+      "price": "RM 766",
+      "link": "https://www.holidaygogogo.com/4d3n-redang-laguna-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972538f"
+    },
+    {
+      "name": "Laguna Redang Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Laguna Honeymoon Package",
+      "resort": "Laguna Redang Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.032476,
+        5.770677
+      ],
+      "longitude": 103.032476,
+      "latitude": 5.770677,
+      "hasValidCoordinates": true,
+      "price": "RM 1,076",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-laguna-honeymoon-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725390"
+    },
+    {
+      "name": "Laguna Redang Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Laguna Resort Yoga Retreat Package",
+      "resort": "Laguna Redang Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.032476,
+        5.770677
+      ],
+      "longitude": 103.032476,
+      "latitude": 5.770677,
+      "hasValidCoordinates": true,
+      "price": "RM 528",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-laguna-resort-yoga-retreat-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725391"
+    },
+    {
+      "name": "Laguna Redang Resort",
+      "packageTitle": "(HRDC) 3D2N Redang Laguna Resort Teambuilding Tour Package",
+      "resort": "Laguna Redang Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.032476,
+        5.770677
+      ],
+      "longitude": 103.032476,
+      "latitude": 5.770677,
+      "hasValidCoordinates": true,
+      "price": "RM 1,100",
+      "link": "https://www.holidaygogogo.com/3d2n-hrdc-teambuilding-at-redang-laguna-resort-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725393"
+    },
+    {
+      "name": "Redang Beach Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Beach Resort Snorkeling Package",
+      "resort": "Redang Beach Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.03301,
+        5.772265
+      ],
+      "longitude": 103.03301,
+      "latitude": 5.772265,
+      "hasValidCoordinates": true,
+      "price": "RM 488",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-snorkeling-package-redang-beach-resort/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725394"
+    },
+    {
+      "name": "Redang Beach Resort",
+      "packageTitle": "(2025 Promo) 4d3n Redang Beach Resort Snorkeling Package",
+      "resort": "Redang Beach Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.03301,
+        5.772265
+      ],
+      "longitude": 103.03301,
+      "latitude": 5.772265,
+      "hasValidCoordinates": true,
+      "price": "RM 708",
+      "link": "https://www.holidaygogogo.com/4d3n-redang-beach-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725395"
+    },
+    {
+      "name": "Redang Beach Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Beach Resort Team Building Package",
+      "resort": "Redang Beach Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.03301,
+        5.772265
+      ],
+      "longitude": 103.03301,
+      "latitude": 5.772265,
+      "hasValidCoordinates": true,
+      "price": "RM 538",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-beach-resort-team-building-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725396"
+    },
+    {
+      "name": "Redang Beach Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Beach Resort Discovery Diving Package",
+      "resort": "Redang Beach Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.03301,
+        5.772265
+      ],
+      "longitude": 103.03301,
+      "latitude": 5.772265,
+      "hasValidCoordinates": true,
+      "price": "RM 708",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-beach-resort-discovery-diving-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725397"
+    },
+    {
+      "name": "Redang Beach Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Beach Resort Diving Package",
+      "resort": "Redang Beach Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.03301,
+        5.772265
+      ],
+      "longitude": 103.03301,
+      "latitude": 5.772265,
+      "hasValidCoordinates": true,
+      "price": "RM 888",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-diving-package-redang-beach-resort/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725398"
+    },
+    {
+      "name": "Redang Beach Resort",
+      "packageTitle": "(HRDC) 3D2N Redang Beach Resort Teambuilding Tour Package",
+      "resort": "Redang Beach Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.03301,
+        5.772265
+      ],
+      "longitude": 103.03301,
+      "latitude": 5.772265,
+      "hasValidCoordinates": true,
+      "price": "RM 1,175",
+      "link": "https://www.holidaygogogo.com/3d2n-hrdc-teambuilding-at-redang-beach-resort-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f9725399"
+    },
+    {
+      "name": "Redang Bay Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Bay Resort Snorkeling Package",
+      "resort": "Redang Bay Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033303,
+        5.77373
+      ],
+      "longitude": 103.033303,
+      "latitude": 5.77373,
+      "hasValidCoordinates": true,
+      "price": "RM 365",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-snorkeling-package-redang-bay-resort/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972539a"
+    },
+    {
+      "name": "Redang Bay Resort",
+      "packageTitle": "(2025 Promo) 4d3n Redang Bay Resort Snorkeling Package",
+      "resort": "Redang Bay Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033303,
+        5.77373
+      ],
+      "longitude": 103.033303,
+      "latitude": 5.77373,
+      "hasValidCoordinates": true,
+      "price": "RM 520",
+      "link": "https://www.holidaygogogo.com/4d3n-redang-bay-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972539b"
+    },
+    {
+      "name": "Redang Bay Resort",
+      "packageTitle": "(2025 Promo) 3D2N Redang Bay Resort Discovery Scuba Diving Package",
+      "resort": "Redang Bay Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033303,
+        5.77373
+      ],
+      "longitude": 103.033303,
+      "latitude": 5.77373,
+      "hasValidCoordinates": true,
+      "price": "RM 550",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-bay-resort-discovery-scuba-diving-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972539c"
+    },
+    {
+      "name": "Redang Bay Resort",
+      "packageTitle": "(2025 Promo) 3D2N Redang Bay Resort Diving Package",
+      "resort": "Redang Bay Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033303,
+        5.77373
+      ],
+      "longitude": 103.033303,
+      "latitude": 5.77373,
+      "hasValidCoordinates": true,
+      "price": "RM 745",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-bay-resort-diving-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972539d"
+    },
+    {
+      "name": "Redang Bay Resort",
+      "packageTitle": "(2025 Promo) 4D3N Redang Bay Resort Open Water Course Package",
+      "resort": "Redang Bay Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033303,
+        5.77373
+      ],
+      "longitude": 103.033303,
+      "latitude": 5.77373,
+      "hasValidCoordinates": true,
+      "price": "RM 1,970",
+      "link": "https://www.holidaygogogo.com/4d3n-redang-bay-resort-open-water-course-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972539e"
+    },
+    {
+      "name": "Redang Reef Resort",
+      "packageTitle": "(2025 Promo) 3d2n Redang Reef Resort Snorkeling Package",
+      "resort": "Redang Reef Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033729,
+        5.769555
+      ],
+      "longitude": 103.033729,
+      "latitude": 5.769555,
+      "hasValidCoordinates": true,
+      "price": "RM 513",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-snorkeling-package-redang-reef-resort/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f972539f"
+    },
+    {
+      "name": "Redang Reef Resort",
+      "packageTitle": "(2025 Promo) 4D3N Redang Reef Resort Snorkelling Package",
+      "resort": "Redang Reef Resort",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033729,
+        5.769555
+      ],
+      "longitude": 103.033729,
+      "latitude": 5.769555,
+      "hasValidCoordinates": true,
+      "price": "RM 697",
+      "link": "https://www.holidaygogogo.com/4d3n-redang-reef-resort-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f97253a0"
+    },
+    {
+      "name": "Redang Holiday Beach Villa",
+      "packageTitle": "(2025 Promo) 3D2N Redang Holiday Beach Resort Snorkelling Package",
+      "resort": "Redang Holiday Beach Villa",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033818,
+        5.777841
+      ],
+      "longitude": 103.033818,
+      "latitude": 5.777841,
+      "hasValidCoordinates": true,
+      "price": "RM 430",
+      "link": "https://www.holidaygogogo.com/3d2n-redang-holiday-package-redang-holiday-beach-villa/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f97253a1"
+    },
+    {
+      "name": "Redang Holiday Beach Villa",
+      "packageTitle": "(2025 Promo) 4D3N Redang Holiday Beach Villa Snorkelling Package",
+      "resort": "Redang Holiday Beach Villa",
+      "island": "Redang",
+      "destination": "Redang",
+      "locationName": "",
+      "coordinates": [
+        103.033818,
+        5.777841
+      ],
+      "longitude": 103.033818,
+      "latitude": 5.777841,
+      "hasValidCoordinates": true,
+      "price": "RM 620",
+      "link": "https://www.holidaygogogo.com/4d3n-redang-holiday-beach-villa-snorkeling-package/",
+      "source": "holidaygogogopackages",
+      "_id": "6874280aab98b9d9f97253a2"
+    }
+  ]
+}

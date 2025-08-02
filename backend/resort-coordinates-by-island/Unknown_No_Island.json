@@ -1,0 +1,2407 @@
+{
+  "island": "Unknown/No Island",
+  "statistics": {
+    "totalResorts": 163,
+    "resortsWithValidCoordinates": 163,
+    "resortsWithoutValidCoordinates": 0,
+    "validCoordinatesPercentage": "100.0",
+    "sources": [
+      "geocodecaches"
+    ]
+  },
+  "resorts": [
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0289914,
+        5.7670558
+      ],
+      "longitude": 103.0289914,
+      "latitude": 5.7670558,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:22.696Z",
+      "source": "geocodecaches",
+      "_id": "68703836f80076e548308969"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:22.594Z",
+      "source": "geocodecaches",
+      "_id": "687039c5f80076e54830896a"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.1392584,
+        5.3354666
+      ],
+      "longitude": 103.1392584,
+      "latitude": 5.3354666,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:40.548Z",
+      "source": "geocodecaches",
+      "_id": "687039c7f80076e54830896b"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:23.688Z",
+      "source": "geocodecaches",
+      "_id": "687039c7f80076e54830896c"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0330059,
+        5.7721911
+      ],
+      "longitude": 103.0330059,
+      "latitude": 5.7721911,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:24.779Z",
+      "source": "geocodecaches",
+      "_id": "687039c8f80076e54830896d"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0117104,
+        5.7821156
+      ],
+      "longitude": 103.0117104,
+      "latitude": 5.7821156,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:25.002Z",
+      "source": "geocodecaches",
+      "_id": "687039c8f80076e54830896e"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.1392584,
+        5.3354666
+      ],
+      "longitude": 103.1392584,
+      "latitude": 5.3354666,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:25.951Z",
+      "source": "geocodecaches",
+      "_id": "687039c9f80076e54830896f"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7497944,
+        5.8939673
+      ],
+      "longitude": 102.7497944,
+      "latitude": 5.8939673,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:08.063Z",
+      "source": "geocodecaches",
+      "_id": "687039c9f80076e548308970"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0338094,
+        5.7778443
+      ],
+      "longitude": 103.0338094,
+      "latitude": 5.7778443,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:27.036Z",
+      "source": "geocodecaches",
+      "_id": "687039caf80076e548308971"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0338094,
+        5.7778443
+      ],
+      "longitude": 103.0338094,
+      "latitude": 5.7778443,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:27.321Z",
+      "source": "geocodecaches",
+      "_id": "687039cbf80076e548308972"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:28.117Z",
+      "source": "geocodecaches",
+      "_id": "687039cbf80076e548308973"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0143661,
+        5.7846899
+      ],
+      "longitude": 103.0143661,
+      "latitude": 5.7846899,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:35.031Z",
+      "source": "geocodecaches",
+      "_id": "687039ccf80076e548308974"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:29.282Z",
+      "source": "geocodecaches",
+      "_id": "687039ccf80076e548308975"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0068926,
+        5.7844414
+      ],
+      "longitude": 103.0068926,
+      "latitude": 5.7844414,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:30.478Z",
+      "source": "geocodecaches",
+      "_id": "687039cef80076e548308976"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0331061,
+        5.7746002
+      ],
+      "longitude": 103.0331061,
+      "latitude": 5.7746002,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:30.565Z",
+      "source": "geocodecaches",
+      "_id": "687039cef80076e548308977"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0331091,
+        5.7736376
+      ],
+      "longitude": 103.0331091,
+      "latitude": 5.7736376,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:31.641Z",
+      "source": "geocodecaches",
+      "_id": "687039cff80076e548308978"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0330059,
+        5.7721911
+      ],
+      "longitude": 103.0330059,
+      "latitude": 5.7721911,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:47.223Z",
+      "source": "geocodecaches",
+      "_id": "687039cff80076e548308979"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0331091,
+        5.7736376
+      ],
+      "longitude": 103.0331091,
+      "latitude": 5.7736376,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:32.744Z",
+      "source": "geocodecaches",
+      "_id": "687039d0f80076e54830897a"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.061621,
+        5.6211838
+      ],
+      "longitude": 103.061621,
+      "latitude": 5.6211838,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:32.860Z",
+      "source": "geocodecaches",
+      "_id": "687039d0f80076e54830897b"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.1392584,
+        5.3354666
+      ],
+      "longitude": 103.1392584,
+      "latitude": 5.3354666,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:33.832Z",
+      "source": "geocodecaches",
+      "_id": "687039d1f80076e54830897c"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.4953899,
+        5.646584
+      ],
+      "longitude": 102.4953899,
+      "latitude": 5.646584,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:33.951Z",
+      "source": "geocodecaches",
+      "_id": "687039d1f80076e54830897d"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:34.991Z",
+      "source": "geocodecaches",
+      "_id": "687039d2f80076e54830897e"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:36.078Z",
+      "source": "geocodecaches",
+      "_id": "687039d3f80076e54830897f"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:48.320Z",
+      "source": "geocodecaches",
+      "_id": "687039d4f80076e548308980"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0068926,
+        5.7844414
+      ],
+      "longitude": 103.0068926,
+      "latitude": 5.7844414,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:37.162Z",
+      "source": "geocodecaches",
+      "_id": "687039d4f80076e548308981"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0330059,
+        5.7721911
+      ],
+      "longitude": 103.0330059,
+      "latitude": 5.7721911,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:38.244Z",
+      "source": "geocodecaches",
+      "_id": "687039d5f80076e548308982"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0068926,
+        5.7844414
+      ],
+      "longitude": 103.0068926,
+      "latitude": 5.7844414,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:39.349Z",
+      "source": "geocodecaches",
+      "_id": "687039d7f80076e548308983"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0330059,
+        5.7721911
+      ],
+      "longitude": 103.0330059,
+      "latitude": 5.7721911,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:40.552Z",
+      "source": "geocodecaches",
+      "_id": "687039d8f80076e548308984"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0330059,
+        5.7721911
+      ],
+      "longitude": 103.0330059,
+      "latitude": 5.7721911,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:41.713Z",
+      "source": "geocodecaches",
+      "_id": "687039d9f80076e548308985"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0331091,
+        5.7736376
+      ],
+      "longitude": 103.0331091,
+      "latitude": 5.7736376,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:42.797Z",
+      "source": "geocodecaches",
+      "_id": "687039daf80076e548308986"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0331267,
+        5.774034899999999
+      ],
+      "longitude": 103.0331267,
+      "latitude": 5.774034899999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:42.816Z",
+      "source": "geocodecaches",
+      "_id": "687039daf80076e548308987"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0331091,
+        5.7736376
+      ],
+      "longitude": 103.0331091,
+      "latitude": 5.7736376,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:43.968Z",
+      "source": "geocodecaches",
+      "_id": "687039dbf80076e548308988"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.019865,
+        5.7554617
+      ],
+      "longitude": 103.019865,
+      "latitude": 5.7554617,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:43.891Z",
+      "source": "geocodecaches",
+      "_id": "687039dbf80076e548308989"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0331091,
+        5.7736376
+      ],
+      "longitude": 103.0331091,
+      "latitude": 5.7736376,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:45.060Z",
+      "source": "geocodecaches",
+      "_id": "687039dcf80076e54830898a"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0068926,
+        5.7844414
+      ],
+      "longitude": 103.0068926,
+      "latitude": 5.7844414,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:44.974Z",
+      "source": "geocodecaches",
+      "_id": "687039dcf80076e54830898b"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0338094,
+        5.7778443
+      ],
+      "longitude": 103.0338094,
+      "latitude": 5.7778443,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:46.169Z",
+      "source": "geocodecaches",
+      "_id": "687039ddf80076e54830898c"
+    },
+    {
+      "name": "Redang",
+      "resortName": "Redang",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0335574,
+        5.7731251
+      ],
+      "longitude": 103.0335574,
+      "latitude": 5.7731251,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:46.132Z",
+      "source": "geocodecaches",
+      "_id": "687039def80076e54830898d"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:47.340Z",
+      "source": "geocodecaches",
+      "_id": "687039def80076e54830898e"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:48.429Z",
+      "source": "geocodecaches",
+      "_id": "687039e0f80076e54830898f"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:49.519Z",
+      "source": "geocodecaches",
+      "_id": "687039e1f80076e548308990"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7396239,
+        5.902127999999999
+      ],
+      "longitude": 102.7396239,
+      "latitude": 5.902127999999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:32.710Z",
+      "source": "geocodecaches",
+      "_id": "687039e1f80076e548308991"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:50.666Z",
+      "source": "geocodecaches",
+      "_id": "687039e2f80076e548308992"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7169061,
+        5.9122767
+      ],
+      "longitude": 102.7169061,
+      "latitude": 5.9122767,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:03.723Z",
+      "source": "geocodecaches",
+      "_id": "687039e2f80076e548308993"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:51.830Z",
+      "source": "geocodecaches",
+      "_id": "687039e3f80076e548308994"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7508136,
+        5.8949915
+      ],
+      "longitude": 102.7508136,
+      "latitude": 5.8949915,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:35.066Z",
+      "source": "geocodecaches",
+      "_id": "687039e3f80076e548308995"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7396239,
+        5.902127999999999
+      ],
+      "longitude": 102.7396239,
+      "latitude": 5.902127999999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:52.924Z",
+      "source": "geocodecaches",
+      "_id": "687039e4f80076e548308996"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7169863,
+        5.9150505
+      ],
+      "longitude": 102.7169863,
+      "latitude": 5.9150505,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:30.472Z",
+      "source": "geocodecaches",
+      "_id": "687039e4f80076e548308997"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:54.003Z",
+      "source": "geocodecaches",
+      "_id": "687039e5f80076e548308998"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7396239,
+        5.902127999999999
+      ],
+      "longitude": 102.7396239,
+      "latitude": 5.902127999999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:55.094Z",
+      "source": "geocodecaches",
+      "_id": "687039e6f80076e548308999"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7396239,
+        5.902127999999999
+      ],
+      "longitude": 102.7396239,
+      "latitude": 5.902127999999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:56.288Z",
+      "source": "geocodecaches",
+      "_id": "687039e7f80076e54830899a"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:27.104Z",
+      "source": "geocodecaches",
+      "_id": "687039e8f80076e54830899b"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:57.448Z",
+      "source": "geocodecaches",
+      "_id": "687039e9f80076e54830899c"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:02.638Z",
+      "source": "geocodecaches",
+      "_id": "687039e9f80076e54830899d"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:58.533Z",
+      "source": "geocodecaches",
+      "_id": "687039eaf80076e54830899e"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:08:59.691Z",
+      "source": "geocodecaches",
+      "_id": "687039ebf80076e54830899f"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:00.776Z",
+      "source": "geocodecaches",
+      "_id": "687039ecf80076e5483089a0"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:01.857Z",
+      "source": "geocodecaches",
+      "_id": "687039edf80076e5483089a1"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7162544,
+        5.9152695
+      ],
+      "longitude": 102.7162544,
+      "latitude": 5.9152695,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:02.935Z",
+      "source": "geocodecaches",
+      "_id": "687039eef80076e5483089a2"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:04.025Z",
+      "source": "geocodecaches",
+      "_id": "687039eff80076e5483089a3"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7162544,
+        5.9152695
+      ],
+      "longitude": 102.7162544,
+      "latitude": 5.9152695,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:05.145Z",
+      "source": "geocodecaches",
+      "_id": "687039f0f80076e5483089a4"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7162544,
+        5.9152695
+      ],
+      "longitude": 102.7162544,
+      "latitude": 5.9152695,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:06.342Z",
+      "source": "geocodecaches",
+      "_id": "687039f2f80076e5483089a5"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:07.419Z",
+      "source": "geocodecaches",
+      "_id": "687039f3f80076e5483089a6"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:08.535Z",
+      "source": "geocodecaches",
+      "_id": "687039f4f80076e5483089a7"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:09.696Z",
+      "source": "geocodecaches",
+      "_id": "687039f5f80076e5483089a8"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7222555,
+        5.921079199999999
+      ],
+      "longitude": 102.7222555,
+      "latitude": 5.921079199999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:10.299Z",
+      "source": "geocodecaches",
+      "_id": "687039f6f80076e5483089a9"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:10.915Z",
+      "source": "geocodecaches",
+      "_id": "687039f6f80076e5483089aa"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7162544,
+        5.9152695
+      ],
+      "longitude": 102.7162544,
+      "latitude": 5.9152695,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:19.284Z",
+      "source": "geocodecaches",
+      "_id": "687039f7f80076e5483089ab"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:12.002Z",
+      "source": "geocodecaches",
+      "_id": "687039f7f80076e5483089ac"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7169061,
+        5.9122767
+      ],
+      "longitude": 102.7169061,
+      "latitude": 5.9122767,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:13.122Z",
+      "source": "geocodecaches",
+      "_id": "687039f8f80076e5483089ad"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7385227,
+        5.8954169
+      ],
+      "longitude": 102.7385227,
+      "latitude": 5.8954169,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:12.607Z",
+      "source": "geocodecaches",
+      "_id": "687039f8f80076e5483089ae"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:14.222Z",
+      "source": "geocodecaches",
+      "_id": "687039f9f80076e5483089af"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7479949297043,
+        5.909231023027367
+      ],
+      "longitude": 102.7479949297043,
+      "latitude": 5.909231023027367,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:15.370Z",
+      "source": "geocodecaches",
+      "_id": "687039fbf80076e5483089b0"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:14.869Z",
+      "source": "geocodecaches",
+      "_id": "687039fbf80076e5483089b1"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.4220052,
+        4.770944699999999
+      ],
+      "longitude": 103.4220052,
+      "latitude": 4.770944699999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:15.971Z",
+      "source": "geocodecaches",
+      "_id": "687039fcf80076e5483089b2"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7497944,
+        5.8939673
+      ],
+      "longitude": 102.7497944,
+      "latitude": 5.8939673,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:16.596Z",
+      "source": "geocodecaches",
+      "_id": "687039fcf80076e5483089b3"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7227115,
+        5.8951106
+      ],
+      "longitude": 102.7227115,
+      "latitude": 5.8951106,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:28.310Z",
+      "source": "geocodecaches",
+      "_id": "687039fdf80076e5483089b4"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1197587,
+        2.7847842
+      ],
+      "longitude": 104.1197587,
+      "latitude": 2.7847842,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:17.684Z",
+      "source": "geocodecaches",
+      "_id": "687039fdf80076e5483089b5"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:18.205Z",
+      "source": "geocodecaches",
+      "_id": "687039fef80076e5483089b6"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1197587,
+        2.7847842
+      ],
+      "longitude": 104.1197587,
+      "latitude": 2.7847842,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:18.759Z",
+      "source": "geocodecaches",
+      "_id": "687039fef80076e5483089b7"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1197587,
+        2.7847842
+      ],
+      "longitude": 104.1197587,
+      "latitude": 2.7847842,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:19.845Z",
+      "source": "geocodecaches",
+      "_id": "687039fff80076e5483089b8"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.2443016,
+        6.1348571
+      ],
+      "longitude": 102.2443016,
+      "latitude": 6.1348571,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:21.455Z",
+      "source": "geocodecaches",
+      "_id": "68703a00f80076e5483089b9"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1197587,
+        2.7847842
+      ],
+      "longitude": 104.1197587,
+      "latitude": 2.7847842,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:20.930Z",
+      "source": "geocodecaches",
+      "_id": "68703a00f80076e5483089ba"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1197587,
+        2.7847842
+      ],
+      "longitude": 104.1197587,
+      "latitude": 2.7847842,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:22.010Z",
+      "source": "geocodecaches",
+      "_id": "68703a01f80076e5483089bb"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1197587,
+        2.7847842
+      ],
+      "longitude": 104.1197587,
+      "latitude": 2.7847842,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:23.101Z",
+      "source": "geocodecaches",
+      "_id": "68703a03f80076e5483089bc"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1197587,
+        2.7847842
+      ],
+      "longitude": 104.1197587,
+      "latitude": 2.7847842,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:24.265Z",
+      "source": "geocodecaches",
+      "_id": "68703a04f80076e5483089bd"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7400674,
+        5.8874206
+      ],
+      "longitude": 102.7400674,
+      "latitude": 5.8874206,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:24.827Z",
+      "source": "geocodecaches",
+      "_id": "68703a05f80076e5483089be"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1698463,
+        2.7902494
+      ],
+      "longitude": 104.1698463,
+      "latitude": 2.7902494,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:25.439Z",
+      "source": "geocodecaches",
+      "_id": "68703a05f80076e5483089bf"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:26.522Z",
+      "source": "geocodecaches",
+      "_id": "68703a06f80076e5483089c0"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:27.614Z",
+      "source": "geocodecaches",
+      "_id": "68703a07f80076e5483089c1"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:28.698Z",
+      "source": "geocodecaches",
+      "_id": "68703a08f80076e5483089c2"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:29.389Z",
+      "source": "geocodecaches",
+      "_id": "68703a09f80076e5483089c3"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:30.040Z",
+      "source": "geocodecaches",
+      "_id": "68703a09f80076e5483089c4"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:31.116Z",
+      "source": "geocodecaches",
+      "_id": "68703a0af80076e5483089c5"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1698463,
+        2.7902494
+      ],
+      "longitude": 104.1698463,
+      "latitude": 2.7902494,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:32.304Z",
+      "source": "geocodecaches",
+      "_id": "68703a0cf80076e5483089c6"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1698463,
+        2.7902494
+      ],
+      "longitude": 104.1698463,
+      "latitude": 2.7902494,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:33.465Z",
+      "source": "geocodecaches",
+      "_id": "68703a0df80076e5483089c7"
+    },
+    {
+      "name": "Perhentian",
+      "resortName": "Perhentian",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7222555,
+        5.921079199999999
+      ],
+      "longitude": 102.7222555,
+      "latitude": 5.921079199999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:33.905Z",
+      "source": "geocodecaches",
+      "_id": "68703a0df80076e5483089c8"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1698463,
+        2.7902494
+      ],
+      "longitude": 104.1698463,
+      "latitude": 2.7902494,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:34.624Z",
+      "source": "geocodecaches",
+      "_id": "68703a0ef80076e5483089c9"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1698463,
+        2.7902494
+      ],
+      "longitude": 104.1698463,
+      "latitude": 2.7902494,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:35.714Z",
+      "source": "geocodecaches",
+      "_id": "68703a0ff80076e5483089ca"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2033431,
+        2.7951857
+      ],
+      "longitude": 104.2033431,
+      "latitude": 2.7951857,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:37.228Z",
+      "source": "geocodecaches",
+      "_id": "68703a10f80076e5483089cb"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1698463,
+        2.7902494
+      ],
+      "longitude": 104.1698463,
+      "latitude": 2.7902494,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:36.802Z",
+      "source": "geocodecaches",
+      "_id": "68703a10f80076e5483089cc"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1698463,
+        2.7902494
+      ],
+      "longitude": 104.1698463,
+      "latitude": 2.7902494,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:37.993Z",
+      "source": "geocodecaches",
+      "_id": "68703a11f80076e5483089cd"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1197587,
+        2.7847842
+      ],
+      "longitude": 104.1197587,
+      "latitude": 2.7847842,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:43.176Z",
+      "source": "geocodecaches",
+      "_id": "68703a12f80076e5483089ce"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1227795,
+        2.7621352
+      ],
+      "longitude": 104.1227795,
+      "latitude": 2.7621352,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:39.216Z",
+      "source": "geocodecaches",
+      "_id": "68703a12f80076e5483089cf"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2552351,
+        1.5574046
+      ],
+      "longitude": 104.2552351,
+      "latitude": 1.5574046,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:40.303Z",
+      "source": "geocodecaches",
+      "_id": "68703a13f80076e5483089d0"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1526641,
+        2.7202007
+      ],
+      "longitude": 104.1526641,
+      "latitude": 2.7202007,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:41.378Z",
+      "source": "geocodecaches",
+      "_id": "68703a14f80076e5483089d1"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1526641,
+        2.7202007
+      ],
+      "longitude": 104.1526641,
+      "latitude": 2.7202007,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:42.453Z",
+      "source": "geocodecaches",
+      "_id": "68703a16f80076e5483089d2"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1221032,
+        2.7654098
+      ],
+      "longitude": 104.1221032,
+      "latitude": 2.7654098,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:05.630Z",
+      "source": "geocodecaches",
+      "_id": "68703a16f80076e5483089d3"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.14241,
+        2.808208
+      ],
+      "longitude": 104.14241,
+      "latitude": 2.808208,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:43.540Z",
+      "source": "geocodecaches",
+      "_id": "68703a17f80076e5483089d4"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2552351,
+        1.5574046
+      ],
+      "longitude": 104.2552351,
+      "latitude": 1.5574046,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:56.735Z",
+      "source": "geocodecaches",
+      "_id": "68703a17f80076e5483089d5"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1698463,
+        2.7902494
+      ],
+      "longitude": 104.1698463,
+      "latitude": 2.7902494,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:24.191Z",
+      "source": "geocodecaches",
+      "_id": "68703a18f80076e5483089d6"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2030196,
+        2.7885178
+      ],
+      "longitude": 104.2030196,
+      "latitude": 2.7885178,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:35.357Z",
+      "source": "geocodecaches",
+      "_id": "68703a1af80076e5483089d7"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2030196,
+        2.7885178
+      ],
+      "longitude": 104.2030196,
+      "latitude": 2.7885178,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:47.004Z",
+      "source": "geocodecaches",
+      "_id": "68703a1bf80076e5483089d8"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2038457,
+        2.7837087
+      ],
+      "longitude": 104.2038457,
+      "latitude": 2.7837087,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:49.172Z",
+      "source": "geocodecaches",
+      "_id": "68703a1df80076e5483089d9"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        100.2129379,
+        5.32414
+      ],
+      "longitude": 100.2129379,
+      "latitude": 5.32414,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:09:57.816Z",
+      "source": "geocodecaches",
+      "_id": "68703a25f80076e5483089da"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        100.2129379,
+        5.32414
+      ],
+      "longitude": 100.2129379,
+      "latitude": 5.32414,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:13.328Z",
+      "source": "geocodecaches",
+      "_id": "68703a27f80076e5483089db"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1230562,
+        2.7605351
+      ],
+      "longitude": 104.1230562,
+      "latitude": 2.7605351,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:01.282Z",
+      "source": "geocodecaches",
+      "_id": "68703a29f80076e5483089dc"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1543731,
+        2.8751854
+      ],
+      "longitude": 104.1543731,
+      "latitude": 2.8751854,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:03.456Z",
+      "source": "geocodecaches",
+      "_id": "68703a2af80076e5483089dd"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1556893,
+        2.8498934
+      ],
+      "longitude": 104.1556893,
+      "latitude": 2.8498934,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:07.881Z",
+      "source": "geocodecaches",
+      "_id": "68703a2ef80076e5483089de"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1596137,
+        2.8446485
+      ],
+      "longitude": 104.1596137,
+      "latitude": 2.8446485,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:14.414Z",
+      "source": "geocodecaches",
+      "_id": "68703a36f80076e5483089df"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1223327,
+        2.7639704
+      ],
+      "longitude": 104.1223327,
+      "latitude": 2.7639704,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:16.580Z",
+      "source": "geocodecaches",
+      "_id": "68703a37f80076e5483089e0"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1215414,
+        2.7566472
+      ],
+      "longitude": 104.1215414,
+      "latitude": 2.7566472,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:17.653Z",
+      "source": "geocodecaches",
+      "_id": "68703a39f80076e5483089e1"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:18.763Z",
+      "source": "geocodecaches",
+      "_id": "68703a3af80076e5483089e2"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1548719,
+        2.8765711
+      ],
+      "longitude": 104.1548719,
+      "latitude": 2.8765711,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:22.023Z",
+      "source": "geocodecaches",
+      "_id": "68703a3bf80076e5483089e3"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.14241,
+        2.808208
+      ],
+      "longitude": 104.14241,
+      "latitude": 2.808208,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:23.109Z",
+      "source": "geocodecaches",
+      "_id": "68703a3ff80076e5483089e4"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:25.277Z",
+      "source": "geocodecaches",
+      "_id": "68703a41f80076e5483089e5"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2552351,
+        1.5574046
+      ],
+      "longitude": 104.2552351,
+      "latitude": 1.5574046,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:26.363Z",
+      "source": "geocodecaches",
+      "_id": "68703a42f80076e5483089e6"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1557752,
+        2.8741511
+      ],
+      "longitude": 104.1557752,
+      "latitude": 2.8741511,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:27.574Z",
+      "source": "geocodecaches",
+      "_id": "68703a43f80076e5483089e7"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        101.4130301,
+        3.1738311
+      ],
+      "longitude": 101.4130301,
+      "latitude": 3.1738311,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:28.663Z",
+      "source": "geocodecaches",
+      "_id": "68703a44f80076e5483089e8"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.122333,
+        2.7455397
+      ],
+      "longitude": 104.122333,
+      "latitude": 2.7455397,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:29.754Z",
+      "source": "geocodecaches",
+      "_id": "68703a45f80076e5483089e9"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1186483,
+        2.776447
+      ],
+      "longitude": 104.1186483,
+      "latitude": 2.776447,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:30.835Z",
+      "source": "geocodecaches",
+      "_id": "68703a46f80076e5483089ea"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1576035,
+        2.8157413
+      ],
+      "longitude": 104.1576035,
+      "latitude": 2.8157413,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:32.028Z",
+      "source": "geocodecaches",
+      "_id": "68703a48f80076e5483089eb"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1584755,
+        2.7169829
+      ],
+      "longitude": 104.1584755,
+      "latitude": 2.7169829,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:33.122Z",
+      "source": "geocodecaches",
+      "_id": "68703a49f80076e5483089ec"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1547445,
+        2.8150439
+      ],
+      "longitude": 104.1547445,
+      "latitude": 2.8150439,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:34.212Z",
+      "source": "geocodecaches",
+      "_id": "68703a4af80076e5483089ed"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2034491,
+        2.7948307
+      ],
+      "longitude": 104.2034491,
+      "latitude": 2.7948307,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:36.524Z",
+      "source": "geocodecaches",
+      "_id": "68703a4cf80076e5483089ee"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1558737,
+        2.7188654
+      ],
+      "longitude": 104.1558737,
+      "latitude": 2.7188654,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:37.609Z",
+      "source": "geocodecaches",
+      "_id": "68703a4df80076e5483089ef"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1234058,
+        2.759637
+      ],
+      "longitude": 104.1234058,
+      "latitude": 2.759637,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:38.713Z",
+      "source": "geocodecaches",
+      "_id": "68703a4ef80076e5483089f0"
+    },
+    {
+      "name": "Tioman",
+      "resortName": "Tioman",
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1595265,
+        2.8439242
+      ],
+      "longitude": 104.1595265,
+      "latitude": 2.8439242,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-11T05:10:39.905Z",
+      "source": "geocodecaches",
+      "_id": "68703a4ff80076e5483089f1"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:15.324Z",
+      "source": "geocodecaches",
+      "_id": "68741ccccc0778bfbd16b98f"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0337404,
+        5.7695029
+      ],
+      "longitude": 103.0337404,
+      "latitude": 5.7695029,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:15.743Z",
+      "source": "geocodecaches",
+      "_id": "68741ccdcc0778bfbd16b990"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:16.196Z",
+      "source": "geocodecaches",
+      "_id": "68741ccecc0778bfbd16b991"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7162544,
+        5.9152695
+      ],
+      "longitude": 102.7162544,
+      "latitude": 5.9152695,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:16.667Z",
+      "source": "geocodecaches",
+      "_id": "68741ccecc0778bfbd16b992"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:17.319Z",
+      "source": "geocodecaches",
+      "_id": "68741ccfcc0778bfbd16b993"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7169061,
+        5.9122767
+      ],
+      "longitude": 102.7169061,
+      "latitude": 5.9122767,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:17.403Z",
+      "source": "geocodecaches",
+      "_id": "68741ccfcc0778bfbd16b994"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7497944,
+        5.8939673
+      ],
+      "longitude": 102.7497944,
+      "latitude": 5.8939673,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:17.731Z",
+      "source": "geocodecaches",
+      "_id": "68741ccfcc0778bfbd16b995"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:18.420Z",
+      "source": "geocodecaches",
+      "_id": "68741cd0cc0778bfbd16b996"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2038457,
+        2.7837087
+      ],
+      "longitude": 104.2038457,
+      "latitude": 2.7837087,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:18.905Z",
+      "source": "geocodecaches",
+      "_id": "68741cd1cc0778bfbd16b997"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1526641,
+        2.7202007
+      ],
+      "longitude": 104.1526641,
+      "latitude": 2.7202007,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T20:59:19.177Z",
+      "source": "geocodecaches",
+      "_id": "68741cd1cc0778bfbd16b998"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:49.374Z",
+      "source": "geocodecaches",
+      "_id": "68741faccc0778bfbd16b99e"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:49.500Z",
+      "source": "geocodecaches",
+      "_id": "68741fadcc0778bfbd16b99f"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.0324755,
+        5.770676799999999
+      ],
+      "longitude": 103.0324755,
+      "latitude": 5.770676799999999,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:49.628Z",
+      "source": "geocodecaches",
+      "_id": "68741fadcc0778bfbd16b9a0"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        103.1392584,
+        5.3354666
+      ],
+      "longitude": 103.1392584,
+      "latitude": 5.3354666,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:50.153Z",
+      "source": "geocodecaches",
+      "_id": "68741fadcc0778bfbd16b9a1"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7392473,
+        5.9007076
+      ],
+      "longitude": 102.7392473,
+      "latitude": 5.9007076,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:50.512Z",
+      "source": "geocodecaches",
+      "_id": "68741fadcc0778bfbd16b9a2"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7162544,
+        5.9152695
+      ],
+      "longitude": 102.7162544,
+      "latitude": 5.9152695,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:51.313Z",
+      "source": "geocodecaches",
+      "_id": "68741faecc0778bfbd16b9a3"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7221365,
+        5.9183806
+      ],
+      "longitude": 102.7221365,
+      "latitude": 5.9183806,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:51.928Z",
+      "source": "geocodecaches",
+      "_id": "68741fafcc0778bfbd16b9a4"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7230018,
+        5.9214587
+      ],
+      "longitude": 102.7230018,
+      "latitude": 5.9214587,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:52.034Z",
+      "source": "geocodecaches",
+      "_id": "68741fafcc0778bfbd16b9a5"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7169061,
+        5.9122767
+      ],
+      "longitude": 102.7169061,
+      "latitude": 5.9122767,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:52.176Z",
+      "source": "geocodecaches",
+      "_id": "68741fafcc0778bfbd16b9a6"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7497944,
+        5.8939673
+      ],
+      "longitude": 102.7497944,
+      "latitude": 5.8939673,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:52.426Z",
+      "source": "geocodecaches",
+      "_id": "68741fafcc0778bfbd16b9a7"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        102.7497944,
+        5.8939673
+      ],
+      "longitude": 102.7497944,
+      "latitude": 5.8939673,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:52.595Z",
+      "source": "geocodecaches",
+      "_id": "68741fb0cc0778bfbd16b9a8"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:53.695Z",
+      "source": "geocodecaches",
+      "_id": "68741fb0cc0778bfbd16b9a9"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1207885,
+        2.7868075
+      ],
+      "longitude": 104.1207885,
+      "latitude": 2.7868075,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:53.530Z",
+      "source": "geocodecaches",
+      "_id": "68741fb1cc0778bfbd16b9aa"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2038457,
+        2.7837087
+      ],
+      "longitude": 104.2038457,
+      "latitude": 2.7837087,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:54.211Z",
+      "source": "geocodecaches",
+      "_id": "68741fb1cc0778bfbd16b9ab"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.2552351,
+        1.5574046
+      ],
+      "longitude": 104.2552351,
+      "latitude": 1.5574046,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:54.446Z",
+      "source": "geocodecaches",
+      "_id": "68741fb2cc0778bfbd16b9ac"
+    },
+    {
+      "island": "Unknown/No Island",
+      "coordinates": [
+        104.1526641,
+        2.7202007
+      ],
+      "longitude": 104.1526641,
+      "latitude": 2.7202007,
+      "hasValidCoordinates": true,
+      "lastUpdated": "2025-07-13T21:05:54.822Z",
+      "source": "geocodecaches",
+      "_id": "68741fb2cc0778bfbd16b9ad"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { protect, isAdmin } = require('../middleware/authMiddleWare');
 const GeocodeCache = require('../models/geocodeCache');
+const ResortLocation = require('../models/resortLocation');
 const {
   populateResortCoordinates,
   getCachedResortCoordinates,
@@ -15,46 +16,33 @@ const { getGoogleReviews } = require('../controllers/resortController');
 // GET /api/resorts - Get all cached resort coordinates (public read access)
 router.get('/', async (req, res) => {
   try {
-    // Group resorts by name and island to avoid duplicates
-    const resorts = await GeocodeCache.aggregate([
-      {
-        $group: {
-          _id: {
-            resortName: '$resortName',
-            island: '$island'
-          },
-          id: { $first: '$_id' }, // Add the first _id as a unique id
-          coordinates: { $first: '$coordinates' },
-          formattedAddress: { $first: '$formattedAddress' },
-          qualityScore: { $max: '$qualityScore' }, // Keep the highest quality score
-          method: { $first: '$method' },
-          isVerified: { $max: '$isVerified' }, // If any is verified, keep it
-          count: { $sum: 1 } // Count how many entries were grouped
-        }
-      },
-      {
-        $project: {
-          _id: 0,
-          id: 1, // Include the unique id
-          name: '$_id.resortName',
-          island: '$_id.island',
-          coordinates: 1,
-          address: '$formattedAddress',
-          qualityScore: 1,
-          method: 1,
-          isVerified: 1,
-          entryCount: '$count'
-        }
-      },
-      {
-        $sort: { qualityScore: -1, name: 1 } // Sort by quality score (highest first), then by name
-      }
-    ]);
+    // Use the new single-source ResortLocation collection
+    const resorts = await ResortLocation.find({})
+      .select('name island location coordinateSource')
+      .sort({ island: 1, name: 1 });
+
+    // Transform to match frontend expectations
+    const transformedResorts = resorts.map(resort => ({
+      id: resort._id,
+      name: resort.name,
+      island: resort.island,
+      coordinates: resort.location?.coordinates || null,
+      address: `${resort.name}, ${resort.island} Island, Malaysia`,
+      precision: resort.coordinateSource === 'google_maps_research_exact' ? 'exact' : 'standard',
+      source: 'resortlocations',
+      coordinateSource: resort.coordinateSource || 'master'
+    }));
+
+    console.log(`📍 Serving ${transformedResorts.length} resorts from single-source collection`);
+    const exactCount = transformedResorts.filter(r => r.precision === 'exact').length;
+    console.log(`🎯 ${exactCount} resorts have exact Google Maps coordinates`);
 
     res.status(200).json({
       success: true,
-      resorts: resorts,
-      count: resorts.length
+      resorts: transformedResorts,
+      count: transformedResorts.length,
+      exactCoordinates: exactCount,
+      source: 'single_source_resortlocations'
     });
   } catch (err) {
     console.error('Error fetching resorts:', err);
@@ -384,15 +372,16 @@ router.get('/geocode', async (req, res) => {
 
     console.log(`🔍 Looking up coordinates for resort: "${resortName}"`);
 
+    // Use the new single-source ResortLocation collection
     // Try exact match first
-    let resort = await GeocodeCache.findOne({ 
-      resortName: { $regex: `^${resortName.trim()}$`, $options: 'i' } 
+    let resort = await ResortLocation.findOne({ 
+      name: { $regex: `^${resortName.trim()}$`, $options: 'i' } 
     });
 
     // If no exact match, try partial match
     if (!resort) {
-      resort = await GeocodeCache.findOne({ 
-        resortName: { $regex: resortName.trim(), $options: 'i' } 
+      resort = await ResortLocation.findOne({ 
+        name: { $regex: resortName.trim(), $options: 'i' } 
       });
     }
 
@@ -400,32 +389,37 @@ router.get('/geocode', async (req, res) => {
     if (!resort) {
       const searchTerms = resortName.trim().split(/\s+/).filter(term => term.length > 2);
       for (const term of searchTerms) {
-        resort = await GeocodeCache.findOne({ 
-          resortName: { $regex: term, $options: 'i' } 
+        resort = await ResortLocation.findOne({ 
+          name: { $regex: term, $options: 'i' } 
         });
         if (resort) break;
       }
     }
 
-    if (resort && resort.coordinates && resort.coordinates.length === 2) {
-      console.log(`✅ Found coordinates for "${resortName}": [${resort.coordinates[0].toFixed(6)}, ${resort.coordinates[1].toFixed(6)}]`);
+    if (resort && resort.location && resort.location.coordinates && resort.location.coordinates.length === 2) {
+      const coordinates = resort.location.coordinates;
+      console.log(`✅ Found exact coordinates for "${resortName}": [${coordinates[0].toFixed(6)}, ${coordinates[1].toFixed(6)}]`);
+      console.log(`📍 Source: Single-source master coordinates (resortlocations)`);
       
       res.json({
         success: true,
-        coordinates: resort.coordinates,
-        resortName: resort.resortName,
+        coordinates: coordinates,
+        resortName: resort.name,
         island: resort.island,
-        formattedAddress: resort.formattedAddress,
-        qualityScore: resort.qualityScore || 0,
-        method: resort.method || 'cached'
+        source: 'resortlocations',
+        precision: 'exact',
+        coordinateSource: resort.coordinateSource || 'master',
+        method: 'single_source_lookup'
       });
     } else {
       console.log(`❌ No coordinates found for resort: "${resortName}"`);
+      console.log(`🔍 Available resorts in database:`, await ResortLocation.find({}).select('name island').limit(5));
       
       res.json({
         success: false,
         message: `No coordinates found for resort: ${resortName}`,
-        coordinates: null
+        coordinates: null,
+        suggestion: 'Check resort name spelling or availability'
       });
     }
 

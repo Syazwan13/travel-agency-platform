@@ -21,6 +21,14 @@ const resortLocationSchema = new mongoose.Schema({
             required: true
         }
     },
+    coordinateSource: {
+        type: String,
+        default: 'master'
+    },
+    lastUpdated: {
+        type: Date,
+        default: Date.now
+    },
     isAlias: {
         type: Boolean,
         default: false
@@ -29,6 +37,8 @@ const resortLocationSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'ResortLocation'
     }
+}, {
+    strict: false // Allow additional fields that might exist in the database
 });
 
 // Create a 2dsphere index for geospatial queries
