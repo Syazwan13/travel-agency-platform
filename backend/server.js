@@ -50,18 +50,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: ['http://localhost:5173'],
+  origin: ['http://localhost:5173', `http://139.59.116.182:${process.env.PORT || 5001}`],
   credentials: true
 }));
-console.log('CORS configured for:', ['http://localhost:5173']);
+console.log('CORS configured for:', ['http://localhost:5173', `http://139.59.116.182:${process.env.PORT || 5001}`]);
 
 // ✅ Serve static files from uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// ✅ Routes
-app.get('/', (req, res) => {
-  res.json({ message: 'Travel scraping API is running...', timestamp: new Date().toISOString() });
-});
+// ✅ Serve React frontend static files
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// ✅ API Routes
 
 app.get('/health', (req, res) => {
   const health = {
@@ -84,6 +84,11 @@ app.use("/api/inquiries", inquiryRoute);
 app.use('/api/resorts', resortRoute);
 app.use('/api/feedback', feedbackRoutes);
 console.log('Routes configured');
+
+// ✅ Catch-all handler: send back React's index.html file for any non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+});
 
 // ✅ Initialize cron
 cronScheduler.init();
