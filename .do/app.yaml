@@ -1,0 +1,45 @@
+name: travel-agency-platform
+services:
+- name: frontend
+  source_dir: /client
+  github:
+    repo: Syazwan13/travel-agency-platform
+    branch: main
+  build_command: npm run build
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  routes:
+  - path: /
+  envs:
+  - key: VITE_API_URL
+    value: ${backend.PUBLIC_URL}
+
+- name: backend
+  source_dir: /backend
+  github:
+    repo: Syazwan13/travel-agency-platform
+    branch: main
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xs
+  routes:
+  - path: /api
+  envs:
+  - key: NODE_ENV
+    value: production
+  - key: PORT
+    value: "8080"
+  - key: DATABASE_CLOUD
+    value: ${db.DATABASE_URL}
+  - key: JWT_SECRET
+    scope: SECRET
+    value: your-jwt-secret-here
+  - key: GOOGLE_MAPS_API_KEY
+    scope: SECRET
+    value: your-google-maps-key
+
+databases:
+- name: db
+  engine: MONGODB
+  version: "5"
