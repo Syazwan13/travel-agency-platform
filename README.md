@@ -53,7 +53,7 @@ A comprehensive travel agency management platform with automated data scraping, 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/travel-agency-platform.git
+   git clone https://github.com/Syazwan13/travel-agency-platform.git
    cd travel-agency-platform
    ```
 
@@ -91,7 +91,7 @@ See our comprehensive [DigitalOcean Deployment Guide](DIGITALOCEAN_DEPLOYMENT_GU
 **Quick Deploy:**
 ```bash
 # On your DigitalOcean droplet
-wget https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/digitalocean-setup.sh
+wget https://raw.githubusercontent.com/Syazwan13/travel-agency-platform/main/digitalocean-setup.sh
 chmod +x digitalocean-setup.sh
 ./digitalocean-setup.sh
 ```

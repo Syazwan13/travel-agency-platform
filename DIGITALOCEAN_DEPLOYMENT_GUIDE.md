@@ -31,7 +31,7 @@
 ssh root@YOUR_DROPLET_IP
 
 # Run the setup script
-wget https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/digitalocean-setup.sh
+wget https://raw.githubusercontent.com/Syazwan13/travel-agency-platform/main/digitalocean-setup.sh
 chmod +x digitalocean-setup.sh
 ./digitalocean-setup.sh
 ```
@@ -40,7 +40,7 @@ chmod +x digitalocean-setup.sh
 ```bash
 # Clone your repository
 cd /var/www
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git travelagency
+git clone https://github.com/Syazwan13/travel-agency-platform.git travelagency
 cd travelagency
 
 # Install backend dependencies
