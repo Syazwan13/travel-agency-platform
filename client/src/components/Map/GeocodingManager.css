@@ -1,0 +1,80 @@
+.geocoding-manager {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.geocoding-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.update-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.update-btn:hover {
+  background-color: #2980b9;
+}
+
+.update-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.geocoding-error {
+  background-color: #fee;
+  color: #e74c3c;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.geocoding-error p {
+  margin: 0;
+}
+
+.geocoding-results {
+  margin-top: 1rem;
+}
+
+.geocoding-results h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.results-summary {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.result-item:last-child {
+  margin-bottom: 0;
+}
+
+.source {
+  font-weight: 500;
+  color: #333;
+}
+
+.count {
+  color: #2980b9;
+} 
