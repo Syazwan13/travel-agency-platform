@@ -57,6 +57,7 @@ console.log('CORS configured for:', ['http://localhost:5173', `http://139.59.116
 
 // ✅ Serve static files from uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // ✅ Serve React frontend static files
 app.use(express.static(path.join(__dirname, '../client/dist')));
@@ -83,6 +84,9 @@ app.use("/api/scraping", scrapingRoute);
 app.use("/api/inquiries", inquiryRoute);
 app.use('/api/resorts', resortRoute);
 app.use('/api/feedback', feedbackRoutes);
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+});
 console.log('Routes configured');
 
 // ✅ Catch-all handler: send back React's index.html file for any non-API routes
