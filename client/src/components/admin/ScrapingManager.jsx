@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import DashboardCard from '../dashboard/DashboardCard';
 import ProgressBar from '../dashboard/ProgressBar';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const ScrapingManager = () => {
   const [scrapingStatus, setScrapingStatus] = useState({
@@ -39,9 +37,7 @@ const ScrapingManager = () => {
 
   const fetchScrapingStatus = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/scraping/running`, {
-        withCredentials: true
-      });
+      const response = await api.get('/api/scraping/running');
       
       const runningOps = response.data.data;
       setScrapingStatus(prev => ({
@@ -56,9 +52,7 @@ const ScrapingManager = () => {
 
   const fetchStatistics = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/scraping/statistics`, {
-        withCredentials: true
-      });
+      const response = await api.get('/api/scraping/statistics');
       
       setScrapingStatus(prev => ({
         ...prev,
@@ -71,9 +65,7 @@ const ScrapingManager = () => {
 
   const fetchCronStatus = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/scraping/cron/status`, {
-        withCredentials: true
-      });
+      const response = await api.get('/api/scraping/cron/status');
       
       setScrapingStatus(prev => ({
         ...prev,
@@ -94,14 +86,12 @@ const ScrapingManager = () => {
       setLoading(true);
       setError(null);
 
-      const response = await axios.post(`${API_URL}/api/scraping/start`, {
+      const response = await api.post('/api/scraping/start', {
         sources: selectedSources,
         config: {
           timeout: 300000,
           retryAttempts: 3
         }
-      }, {
-        withCredentials: true
       });
 
       if (response.data.success) {
@@ -126,10 +116,9 @@ const ScrapingManager = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post(
-        `${API_URL}/api/scraping/cancel/${scrapingStatus.currentOperation.operationId}`,
-        {},
-        { withCredentials: true }
+      const response = await api.post(
+        `/api/scraping/cancel/${scrapingStatus.currentOperation.operationId}`,
+        {}
       );
 
       if (response.data.success) {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import { 
     FiUser, 
     FiMail, 
@@ -12,8 +12,6 @@ import {
     FiClock,
     FiAlertCircle
 } from 'react-icons/fi';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const TravelAgencyApproval = ({ onApprovalChange }) => {
     const [pendingAgencies, setPendingAgencies] = useState([]);
@@ -31,9 +29,7 @@ const TravelAgencyApproval = ({ onApprovalChange }) => {
     const fetchPendingAgencies = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`${API_URL}/api/profile/admin/users`, {
-                withCredentials: true
-            });
+            const response = await api.get('/api/profile/admin/users');
             
             // Filter for pending travel agencies
             const pending = response.data.filter(user => 
@@ -55,10 +51,9 @@ const TravelAgencyApproval = ({ onApprovalChange }) => {
             
             const newStatus = approved ? 'active' : 'suspended';
             
-            await axios.put(
-                `${API_URL}/api/profile/admin/users/${userId}/status`,
-                { status: newStatus },
-                { withCredentials: true }
+            await api.put(
+                `/api/profile/admin/users/${userId}/status`,
+                { status: newStatus }
             );
             
             // Remove from pending list
@@ -109,10 +104,9 @@ const TravelAgencyApproval = ({ onApprovalChange }) => {
         try {
             setError('');
             const promises = selectedAgencies.map(agencyId => 
-                axios.put(
-                    `${API_URL}/api/profile/admin/users/${agencyId}/status`,
-                    { status: approved ? 'active' : 'suspended' },
-                    { withCredentials: true }
+                api.put(
+                    `/api/profile/admin/users/${agencyId}/status`,
+                    { status: approved ? 'active' : 'suspended' }
                 )
             );
 

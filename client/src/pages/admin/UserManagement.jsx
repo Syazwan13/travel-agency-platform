@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import { useAuth } from '../../context/AuthContext';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const UserManagement = () => {
     const [users, setUsers] = useState([]);
@@ -17,9 +15,7 @@ const UserManagement = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get(`${API_URL}/api/profile/admin/users`, {
-                withCredentials: true
-            });
+            const response = await api.get('/api/profile/admin/users');
             setUsers(response.data);
             setLoading(false);
         } catch (err) {
@@ -33,10 +29,9 @@ const UserManagement = () => {
             setError(null);
             setSuccess(null);
             
-            await axios.put(
-                `${API_URL}/api/profile/admin/users/${userId}/status`,
-                { status: newStatus },
-                { withCredentials: true }
+            await api.put(
+                `/api/profile/admin/users/${userId}/status`,
+                { status: newStatus }
             );
             
             setUsers(users.map(user => 
