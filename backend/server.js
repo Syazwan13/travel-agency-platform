@@ -49,20 +49,68 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// CORS configuration - Enhanced for both specific environments and troubleshooting
 app.use(cors({
-  origin: ['http://localhost:5173', `http://139.59.116.182:${process.env.PORT || 5001}`],
-  credentials: true
+  // Allow specific origins AND set to true for allowed origins
+  origin: function(origin, callback) {
+    const allowedOrigins = [
+      // Local development
+      'http://localhost:5173', 
+      'http://localhost:3000',
+      
+      // Production
+      'http://167.172.66.203',
+      'http://167.172.66.203:5001',
+      'http://167.172.66.203:3000',
+      'http://167.172.66.203:80'
+    ];
+    
+    // For development & troubleshooting - allow requests with no origin
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      console.log('CORS request from:', origin);
+      // For troubleshooting - allow all origins temporarily
+      callback(null, true);
+      
+      // Change to this when troubleshooting is complete:
+      // callback(new Error('Not allowed by CORS'));
+    }
+  },
+  
+  // Important: These settings are needed for cookies/auth to work properly
+  credentials: true,
+      
+  // Allow all common methods
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  
+  // Allow all the headers that might be used
+  allowedHeaders: [
+    'Content-Type', 
+    'Authorization', 
+    'X-Requested-With', 
+    'Accept', 
+    'Origin', 
+    'Access-Control-Request-Method', 
+    'Access-Control-Request-Headers'
+  ],
+  
+  // Allow browsers to receive these headers in response
+  exposedHeaders: ['Content-Length', 'X-Total-Count']
 }));
-console.log('CORS configured for:', ['http://localhost:5173', `http://139.59.116.182:${process.env.PORT || 5001}`]);
+
+console.log('CORS configured for local, production and troubleshooting');
 
 // ✅ Serve static files from uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-// ✅ Serve React frontend static files
-app.use(express.static(path.join(__dirname, '../client/dist')));
-
-// ✅ API Routes
+// ✅ Routes
+app.get('/', (req, res) => {
+  res.json({ message: 'Travel scraping API is running...', timestamp: new Date().toISOString() });
+});
 
 app.get('/health', (req, res) => {
   const health = {
@@ -73,6 +121,16 @@ app.get('/health', (req, res) => {
     database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
   };
   res.json(health);
+});
+
+// Debug endpoint for CORS testing
+app.get('/cors-test', (req, res) => {
+  res.json({ 
+    message: 'CORS is working properly',
+    origin: req.headers.origin,
+    headers: req.headers,
+    timestamp: new Date().toISOString()
+  });
 });
 
 app.use("/api/websitescrape", websiteScrapeRoute);
@@ -88,11 +146,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 console.log('Routes configured');
-
-// ✅ Catch-all handler: send back React's index.html file for any non-API routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-});
 
 // ✅ Initialize cron
 cronScheduler.init();

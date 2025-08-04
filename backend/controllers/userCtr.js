@@ -96,13 +96,17 @@ const registerUser = asyncHandler(async (req, res) => {
     const user = await User.create(userData);
 
     const token = generateToken(user._id);
-    res.cookie("token", token, {
+    
+    // Set cookie options based on environment
+    const cookieOptions = {
         path: "/",
         httpOnly: true,
         expires: new Date(Date.now() + 1000 * 86400), // 1 day
-        sameSite: "none",
-        secure: true,
-    });
+        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+        secure: process.env.NODE_ENV === 'production' && process.env.USE_HTTPS === 'true'
+    };
+
+    res.cookie("token", token, cookieOptions);
 
     if(user) {
         const {_id, name, email, photo, role} = user;
@@ -148,13 +152,17 @@ const loginUser = asyncHandler(async (req, res) => {
     await user.save();
 
     const token = generateToken(user._id);
-    res.cookie("token", token, {
+    
+    // Set cookie options based on environment
+    const cookieOptions = {
         path: "/",
         httpOnly: true,
         expires: new Date(Date.now() + 1000 * 86400), // 1 day
-        sameSite: "none",
-        secure: true,
-    });
+        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+        secure: process.env.NODE_ENV === 'production' && process.env.USE_HTTPS === 'true'
+    };
+
+    res.cookie("token", token, cookieOptions);
 
     const { _id, name, photo, role } = user;
     res.status(200).json({
@@ -187,13 +195,16 @@ const loginStatus = asyncHandler(async (req, res) => {
 // @route   GET /api/users/logout
 // @access  Public
 const logoutUser = asyncHandler(async (req, res) => {
-    res.cookie("token", "", {
+    // Set cookie options based on environment
+    const cookieOptions = {
         path: "/",
         httpOnly: true,
         expires: new Date(0),
-        sameSite: "none",
-        secure: true,
-    });
+        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+        secure: process.env.NODE_ENV === 'production' && process.env.USE_HTTPS === 'true'
+    };
+    
+    res.cookie("token", "", cookieOptions);
     return res.status(200).json({ message: "Successfully logged out" });
 });
 
