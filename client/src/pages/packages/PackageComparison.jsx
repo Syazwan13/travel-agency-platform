@@ -8,7 +8,7 @@ import InquiryForm from '../../components/inquiry/InquiryForm';
 import WhatsAppSuccessModal from '../../components/inquiry/WhatsAppSuccessModal';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const PackageComparison = () => {
   const [packages, setPackages] = useState([]);
