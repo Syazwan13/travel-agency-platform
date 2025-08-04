@@ -15,7 +15,7 @@ const ApiTest = () => {
   const testApiConnections = async () => {
     // Test 1: Backend health check
     try {
-      const healthResponse = await axios.get('http://localhost:5001/health');
+              const healthResponse = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/health`);
       setApiStatus(prev => ({
         ...prev,
         health: `✅ Connected - ${healthResponse.data.status}`
@@ -29,7 +29,7 @@ const ApiTest = () => {
 
     // Test 2: Backend root endpoint
     try {
-      const backendResponse = await axios.get('http://localhost:5001/');
+              const backendResponse = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/`);
       setApiStatus(prev => ({
         ...prev,
         backend: `✅ Connected - ${backendResponse.data.message}`
@@ -43,7 +43,7 @@ const ApiTest = () => {
 
     // Test 3: Packages endpoint
     try {
-      const packagesResponse = await axios.get('http://localhost:5001/api/packages');
+              const packagesResponse = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/packages`);
       const packageCount = packagesResponse.data.data?.packages?.length || 0;
       setApiStatus(prev => ({
         ...prev,

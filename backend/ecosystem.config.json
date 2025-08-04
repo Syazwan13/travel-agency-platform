@@ -5,7 +5,8 @@
   "exec_mode": "cluster",
   "env": {
     "NODE_ENV": "production",
-    "PORT": 5001
+    "PORT": 5001,
+    "USE_HTTPS": "false"
   },
   "log_date_format": "YYYY-MM-DD HH:mm Z",
   "error_file": "./logs/err.log",

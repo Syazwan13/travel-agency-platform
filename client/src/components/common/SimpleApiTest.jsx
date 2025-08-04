@@ -11,7 +11,7 @@ const SimpleApiTest = () => {
     
     try {
       console.log('Testing API connection...');
-      const response = await axios.get('http://localhost:5001/api/packages');
+              const response = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/packages`);
       console.log('API Response:', response);
       
       if (response.data && response.data.success) {

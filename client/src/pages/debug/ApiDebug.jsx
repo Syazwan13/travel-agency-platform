@@ -1,29 +1,90 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import api from '../../utils/apiConfig';
 
 const ApiDebug = () => {
   const [results, setResults] = useState({});
   const [loading, setLoading] = useState(false);
+  const [testResults, setTestResults] = useState([]);
+  const [loadingAuth, setLoadingAuth] = useState(false);
+
+  const addResult = (test, status, data, error) => {
+    setTestResults(prev => [...prev, {
+      test,
+      status,
+      data,
+      error,
+      timestamp: new Date().toLocaleTimeString()
+    }]);
+  };
+
+  const runAuthTest = async () => {
+    setLoadingAuth(true);
+    setTestResults([]);
+
+    // Test 1: Check if logged in
+    try {
+      console.log('Testing login status...');
+      const response = await api.get('/api/users/loggedIn');
+      addResult('Login Status', 'success', response.data, null);
+      console.log('Login status response:', response.data);
+    } catch (error) {
+      addResult('Login Status', 'error', null, error.message);
+      console.error('Login status error:', error);
+    }
+
+    // Test 2: Get user data
+    try {
+      console.log('Testing user data fetch...');
+      const response = await api.get('/api/users/getuser');
+      addResult('User Data', 'success', response.data, null);
+      console.log('User data response:', response.data);
+    } catch (error) {
+      addResult('User Data', 'error', null, error.message);
+      console.error('User data error:', error);
+    }
+
+    // Test 3: Test admin endpoint
+    try {
+      console.log('Testing admin endpoint...');
+      const response = await api.get('/api/profile/admin/users');
+      addResult('Admin Users', 'success', `Found ${response.data.length} users`, null);
+      console.log('Admin users response:', response.data.length);
+    } catch (error) {
+      addResult('Admin Users', 'error', null, error.message);
+      console.error('Admin users error:', error);
+    }
+
+    // Test 4: Check localStorage
+    const token = localStorage.getItem('authToken');
+    addResult('LocalStorage Token', token ? 'success' : 'warning', token ? 'Token found' : 'No token', null);
+
+    // Test 5: Check cookies
+    const cookies = document.cookie;
+    addResult('Browser Cookies', cookies ? 'success' : 'warning', cookies || 'No cookies', null);
+
+    setLoadingAuth(false);
+  };
 
   const testEndpoints = [
     {
       name: 'Backend Health',
-      url: 'http://localhost:5001/health',
+              url: `${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/health`,
       method: 'GET'
     },
     {
       name: 'Backend Root',
-      url: 'http://localhost:5001/',
+              url: `${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/`,
       method: 'GET'
     },
     {
       name: 'All Packages',
-      url: 'http://localhost:5001/api/packages',
+              url: `${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/packages`,
       method: 'GET'
     },
     {
       name: 'Packages with Coordinates',
-      url: 'http://localhost:5001/api/packages/with-coordinates',
+              url: `${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/packages/with-coordinates`,
       method: 'GET'
     },
     {
@@ -199,6 +260,50 @@ const ApiDebug = () => {
             <div><strong>VITE_API_URL:</strong> {import.meta.env.VITE_API_URL || 'Not set'}</div>
             <div><strong>Current URL:</strong> {window.location.origin}</div>
             <div><strong>Mode:</strong> {import.meta.env.MODE}</div>
+          </div>
+        </div>
+
+        <div className="mt-8 bg-gray-50 p-4 rounded-lg mt-6">
+          <h3 className="font-semibold mb-2">API Authentication Debug</h3>
+          <button 
+            onClick={runAuthTest}
+            disabled={loadingAuth}
+            className="bg-blue-600 text-white px-4 py-2 rounded mb-6 disabled:bg-gray-400"
+          >
+            {loadingAuth ? 'Running Tests...' : 'Run Authentication Tests'}
+          </button>
+
+          <div className="space-y-4">
+            {testResults.map((result, index) => (
+              <div key={index} className={`p-4 rounded border ${
+                result.status === 'success' ? 'bg-green-50 border-green-200' :
+                result.status === 'error' ? 'bg-red-50 border-red-200' :
+                'bg-yellow-50 border-yellow-200'
+              }`}>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-semibold">{result.test}</h3>
+                    <p className="text-sm text-gray-600">{result.timestamp}</p>
+                    {result.data && <p className="mt-2">{JSON.stringify(result.data, null, 2)}</p>}
+                    {result.error && <p className="mt-2 text-red-600">{result.error}</p>}
+                  </div>
+                  <span className={`px-2 py-1 rounded text-xs font-semibold ${
+                    result.status === 'success' ? 'bg-green-200 text-green-800' :
+                    result.status === 'error' ? 'bg-red-200 text-red-800' :
+                    'bg-yellow-200 text-yellow-800'
+                  }`}>
+                    {result.status.toUpperCase()}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 p-4 bg-gray-50 rounded">
+            <h3 className="font-semibold mb-2">Environment Info:</h3>
+            <p><strong>API URL:</strong> {import.meta.env.VITE_API_URL || 'Not set'}</p>
+            <p><strong>Current URL:</strong> {window.location.href}</p>
+            <p><strong>Hostname:</strong> {window.location.hostname}</p>
           </div>
         </div>
       </div>

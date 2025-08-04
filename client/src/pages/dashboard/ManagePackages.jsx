@@ -6,7 +6,7 @@ import AgencyPackageCard from '../../components/packages/AgencyPackageCard';
 import PackageFormModal from '../../components/packages/PackageFormModal';
 import { FaPlus, FaBox, FaSpinner } from 'react-icons/fa';
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 /**
  * Determines the API endpoint based on user's company/provider

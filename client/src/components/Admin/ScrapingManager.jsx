@@ -3,7 +3,7 @@ import axios from 'axios';
 import DashboardCard from '../dashboard/DashboardCard';
 import ProgressBar from '../dashboard/ProgressBar';
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const ScrapingManager = () => {
   const [scrapingStatus, setScrapingStatus] = useState({

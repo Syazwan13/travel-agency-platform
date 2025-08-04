@@ -100,7 +100,7 @@ const TestPage = () => {
     addLog('Testing direct endpoint...');
 
     try {
-      const response = await axios.get('http://localhost:5001/api/packages');
+              const response = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/packages`);
       addLog(`Direct endpoint status: ${response.status}`, 'success');
       
       if (response.data && response.data.data && response.data.data.packages) {

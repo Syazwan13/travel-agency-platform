@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import DashboardCard from '../../components/dashboard/DashboardCard';
 import StatCard from '../../components/dashboard/StatCard';
 import QuickActions from '../../components/dashboard/QuickActions';
 import ProgressBar from '../../components/dashboard/ProgressBar';
 import ScrapingManager from '../../components/admin/ScrapingManager';
 import TravelAgencyApproval from '../../components/admin/TravelAgencyApproval';
-
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 
 const AdminDashboard = () => {
   const [analytics, setAnalytics] = useState(null);
@@ -23,9 +21,7 @@ const AdminDashboard = () => {
 
   const fetchUserStats = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/profile/admin/users`, {
-        withCredentials: true
-      });
+      const response = await api.get('/api/profile/admin/users');
       const users = response.data.users || [];
       const agencies = users.filter(user => user.role === 'travel_agency');
       const pending = agencies.filter(agency => agency.status === 'pending');
@@ -40,9 +36,7 @@ const AdminDashboard = () => {
   const fetchAnalytics = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_URL}/api/dashboard/admin/analytics`, {
-        withCredentials: true
-      });
+      const response = await api.get('/api/dashboard/admin/analytics');
       setAnalytics(response.data);
       setError(null);
     } catch (err) {
