@@ -105,6 +105,7 @@ console.log('CORS configured for local, production and troubleshooting');
 
 // ✅ Serve static files from uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // ✅ Routes
 app.get('/', (req, res) => {
@@ -141,6 +142,9 @@ app.use("/api/scraping", scrapingRoute);
 app.use("/api/inquiries", inquiryRoute);
 app.use('/api/resorts', resortRoute);
 app.use('/api/feedback', feedbackRoutes);
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+});
 console.log('Routes configured');
 
 // ✅ Initialize cron
