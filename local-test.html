@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        button { padding: 10px; margin: 5px; cursor: pointer; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Local API Test</h1>
+    <p>This is a simple test for your local API</p>
+    
+    <button id="testApi">Test Local API</button>
+    <button id="testServer">Check if Server is Running</button>
+    
+    <div id="result"></div>
+    
+    <script>
+        document.getElementById('testServer').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = "Checking if server is running...";
+            
+            try {
+                // Simple ping test using XMLHttpRequest which may provide more error details
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'http://localhost:5001/health', true);
+                
+                xhr.onload = function() {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        resultDiv.innerHTML = `
+                            <h3 class="success">Server is running! ✅</h3>
+                            <pre>${xhr.responseText}</pre>
+                        `;
+                    } else {
+                        resultDiv.innerHTML = `
+                            <h3 class="error">Server responded with status ${xhr.status}</h3>
+                            <pre>${xhr.responseText}</pre>
+                        `;
+                    }
+                };
+                
+                xhr.onerror = function() {
+                    resultDiv.innerHTML = `
+                        <h3 class="error">Cannot connect to server! ❌</h3>
+                        <p>The server at localhost:5001 is not responding. Make sure it's running.</p>
+                        <p>Error details: Connection refused or network error</p>
+                    `;
+                };
+                
+                xhr.send();
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <h3 class="error">Error checking server: ${error.message}</h3>
+                `;
+            }
+        });
+
+        document.getElementById('testApi').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = "Testing connection to local API...";
+            
+            try {
+                resultDiv.innerHTML += "<p>Attempting to connect to localhost:5001/health...</p>";
+                
+                // Test the connection to your local API without credentials
+                const response = await fetch('http://localhost:5001/health', {
+                    // Removed credentials to simplify the test
+                });
+                
+                resultDiv.innerHTML += `<p>Response status: ${response.status}</p>`;
+                const data = await response.json();
+                
+                resultDiv.innerHTML = `
+                    <h3 class="success">Connection successful! ✅</h3>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <h3 class="error">Connection failed! ❌</h3>
+                    <p>Error: ${error.message}</p>
+                    <h4>Possible solutions:</h4>
+                    <ul>
+                        <li>Make sure your backend server is running at localhost:5001</li>
+                        <li>Check that CORS is properly configured</li>
+                        <li>Check your network connection</li>
+                    </ul>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

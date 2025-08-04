@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>Travel Agency API Test</h1>
+    <button onclick="testPackagesAPI()">Test Packages API</button>
+    <button onclick="testResortsAPI()">Test Resorts API</button>
+    <div id="result"></div>
+
+    <script>
+        async function testPackagesAPI() {
+            try {
+                const response = await fetch('http://167.172.66.203:5001/api/packages');
+                const data = await response.json();
+                document.getElementById('result').innerHTML = `
+                    <h3>Packages API Response:</h3>
+                    <p>Status: ${response.status}</p>
+                    <p>Success: ${data.success}</p>
+                    <p>Data type: ${typeof data.data}</p>
+                    <p>Data length: ${Array.isArray(data.data) ? data.data.length : 'Not an array'}</p>
+                    <pre>${JSON.stringify(data, null, 2).substring(0, 1000)}...</pre>
+                `;
+            } catch (error) {
+                document.getElementById('result').innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        }
+
+        async function testResortsAPI() {
+            try {
+                const response = await fetch('http://167.172.66.203:5001/api/resorts');
+                const data = await response.json();
+                document.getElementById('result').innerHTML = `
+                    <h3>Resorts API Response:</h3>
+                    <p>Status: ${response.status}</p>
+                    <p>Success: ${data.success}</p>
+                    <p>Resorts length: ${data.resorts ? data.resorts.length : 'No resorts'}</p>
+                    <pre>${JSON.stringify(data, null, 2).substring(0, 1000)}...</pre>
+                `;
+            } catch (error) {
+                document.getElementById('result').innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
