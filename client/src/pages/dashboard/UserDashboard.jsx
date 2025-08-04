@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import { useAuth } from '../../context/AuthContext';
 import DashboardCard from '../../components/dashboard/DashboardCard';
 import StatCard from '../../components/dashboard/StatCard';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const UserDashboard = () => {
   const { user, favorites, removeFavorite } = useAuth();
@@ -30,8 +28,8 @@ const UserDashboard = () => {
   const fetchUserData = async () => {
     try {
       setLoading(true);
-      const dashboardResponse = await fetch(`${API_URL}/api/dashboard/user/stats`, { credentials: 'include' });
-      const dashboardData = await dashboardResponse.json();
+      const dashboardResponse = await api.get('/api/dashboard/user/stats');
+      const dashboardData = dashboardResponse.data;
       setUserStats({
         favoritesCount: dashboardData.data?.favoritesCount || 0,
         bookingHistoryCount: dashboardData.data?.bookingHistoryCount || 0,
@@ -47,8 +45,8 @@ const UserDashboard = () => {
   const fetchRecentInquiries = async () => {
     try {
       const limit = showAllInquiries ? 100 : 3;
-      const response = await fetch(`${API_URL}/api/inquiries?page=1&limit=${limit}`, { credentials: 'include' });
-      const data = await response.json();
+      const response = await api.get(`/api/inquiries?page=1&limit=${limit}`);
+      const data = response.data;
       if (data.success) {
         setRecentInquiries(data.data || []);
         setTotalInquiries(data.pagination?.total || data.data.length || 0);

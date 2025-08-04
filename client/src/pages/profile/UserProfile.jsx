@@ -1,11 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import React from 'react';
 import DashboardLayout from '../../components/dashboard/DashboardLayout';
 import TelegramNotificationModal, { shouldShowTelegramModal, resetTelegramModalPreference } from '../../components/common/TelegramNotificationModal';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const UserProfile = () => {
     const { user, checkAuthStatus } = useAuth();
@@ -35,9 +33,7 @@ const UserProfile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.get(`${API_URL}/api/profile/me`, {
-                    withCredentials: true
-                });
+                const response = await api.get('/api/profile/me');
                 console.log('Fetched user profile:', response.data); // Debug log
                 const d = response.data || {};
                 let firstName = '', lastName = '';
@@ -72,7 +68,7 @@ const UserProfile = () => {
     useEffect(() => {
         const fetchInquiries = async () => {
             try {
-                const response = await axios.get(`${API_URL}/api/inquiries`, { withCredentials: true });
+                const response = await api.get('/api/inquiries');
                 if (response.data && response.data.data && response.data.data.length > 0) {
                     setLatestInquiryId(response.data.data[0]._id);
                 }
@@ -116,11 +112,10 @@ const UserProfile = () => {
         setError(null);
         setSuccess(null);
         try {
-            const response = await axios.put(
-                `${API_URL}/api/profile/photo`,
+            const response = await api.put(
+                '/api/profile/photo',
                 formData,
                 {
-                    withCredentials: true,
                     headers: { 'Content-Type': 'multipart/form-data' }
                 }
             );
@@ -144,10 +139,9 @@ const UserProfile = () => {
             };
             delete payload.firstName;
             delete payload.lastName;
-            const response = await axios.put(
-                `${API_URL}/api/profile/update`,
-                payload,
-                { withCredentials: true }
+            const response = await api.put(
+                '/api/profile/update',
+                payload
             );
             setSuccess('Profile updated successfully');
             setEditSection(null);
