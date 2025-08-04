@@ -1,0 +1,79 @@
+[1mdiff --git a/client/src/components/Admin/ScrapingManager.jsx b/client/src/components/Admin/ScrapingManager.jsx[m
+[1mindex 1baec33..28a0321 100644[m
+[1m--- a/client/src/components/Admin/ScrapingManager.jsx[m
+[1m+++ b/client/src/components/Admin/ScrapingManager.jsx[m
+[36m@@ -1,10 +1,8 @@[m
+ import React, { useState, useEffect } from 'react';[m
+[31m-import axios from 'axios';[m
+[32m+[m[32mimport api from '../../utils/apiConfig';[m
+ import DashboardCard from '../dashboard/DashboardCard';[m
+ import ProgressBar from '../dashboard/ProgressBar';[m
+ [m
+[31m-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");[m
+[31m-[m
+ const ScrapingManager = () => {[m
+   const [scrapingStatus, setScrapingStatus] = useState({[m
+     isRunning: false,[m
+[36m@@ -39,9 +37,7 @@[m [mconst ScrapingManager = () => {[m
+ [m
+   const fetchScrapingStatus = async () => {[m
+     try {[m
+[31m-      const response = await axios.get(`${API_URL}/api/scraping/running`, {[m
+[31m-        withCredentials: true[m
+[31m-      });[m
+[32m+[m[32m      const response = await api.get('/api/scraping/running');[m
+       [m
+       const runningOps = response.data.data;[m
+       setScrapingStatus(prev => ({[m
+[36m@@ -56,9 +52,7 @@[m [mconst ScrapingManager = () => {[m
+ [m
+   const fetchStatistics = async () => {[m
+     try {[m
+[31m-      const response = await axios.get(`${API_URL}/api/scraping/statistics`, {[m
+[31m-        withCredentials: true[m
+[31m-      });[m
+[32m+[m[32m      const response = await api.get('/api/scraping/statistics');[m
+       [m
+       setScrapingStatus(prev => ({[m
+         ...prev,[m
+[36m@@ -71,9 +65,7 @@[m [mconst ScrapingManager = () => {[m
+ [m
+   const fetchCronStatus = async () => {[m
+     try {[m
+[31m-      const response = await axios.get(`${API_URL}/api/scraping/cron/status`, {[m
+[31m-        withCredentials: true[m
+[31m-      });[m
+[32m+[m[32m      const response = await api.get('/api/scraping/cron/status');[m
+       [m
+       setScrapingStatus(prev => ({[m
+         ...prev,[m
+[36m@@ -94,14 +86,12 @@[m [mconst ScrapingManager = () => {[m
+       setLoading(true);[m
+       setError(null);[m
+ [m
+[31m-      const response = await axios.post(`${API_URL}/api/scraping/start`, {[m
+[32m+[m[32m      const response = await api.post('/api/scraping/start', {[m
+         sources: selectedSources,[m
+         config: {[m
+           timeout: 300000,[m
+           retryAttempts: 3[m
+         }[m
+[31m-      }, {[m
+[31m-        withCredentials: true[m
+       });[m
+ [m
+       if (response.data.success) {[m
+[36m@@ -126,10 +116,9 @@[m [mconst ScrapingManager = () => {[m
+ [m
+     try {[m
+       setLoading(true);[m
+[31m-      const response = await axios.post([m
+[31m-        `${API_URL}/api/scraping/cancel/${scrapingStatus.currentOperation.operationId}`,[m
+[31m-        {},[m
+[31m-        { withCredentials: true }[m
+[32m+[m[32m      const response = await api.post([m
+[32m+[m[32m        `/api/scraping/cancel/${scrapingStatus.currentOperation.operationId}`,[m
+[32m+[m[32m        {}[m
+       );[m
+ [m
+       if (response.data.success) {[m
