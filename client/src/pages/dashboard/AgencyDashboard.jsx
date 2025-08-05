@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import { useAuth } from '../../context/AuthContext';
 import DashboardCard from '../../components/dashboard/DashboardCard';
 import StatCard from '../../components/dashboard/StatCard';
@@ -10,8 +10,6 @@ import { Bar, Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { FiPlus, FiEdit, FiTrash2, FiEye, FiSettings } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const getProviderApiBase = (user) => {
   if (!user || user.role !== 'travel_agency') return null;
@@ -50,9 +48,7 @@ const AgencyDashboard = () => {
   const fetchDashboardData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_URL}/api/dashboard/agency/stats`, {
-        withCredentials: true
-      });
+      const response = await api.get('/api/dashboard/agency/stats');
       const data = response.data.data;
       setStats({
         totalPackages: data.totalPackages || 0,
@@ -80,7 +76,7 @@ const AgencyDashboard = () => {
         setError('Unable to identify your provider. Please contact support.');
         return;
       }
-      const response = await axios.get(`${API_URL}${apiBase}/my`, { withCredentials: true });
+      const response = await api.get(`${apiBase}/my`);
       setMyPackages(response.data.data.packages || []);
       setError(null);
     } catch (err) {
@@ -114,9 +110,7 @@ const AgencyDashboard = () => {
       const apiBase = getProviderApiBase(user);
       if (!apiBase) throw new Error('Unknown provider');
       
-      await axios.delete(`${API_URL}${apiBase}/${packageId}`, {
-        withCredentials: true
-      });
+                      await api.delete(`${apiBase}/${packageId}`);
       
       // Refresh the packages list
       fetchMyPackages();

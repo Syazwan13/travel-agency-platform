@@ -171,11 +171,11 @@ const UserProfile = () => {
                     {/* Profile Card */}
                     <div className="bg-white shadow-xl rounded-3xl p-10 flex flex-col md:flex-row items-center mb-12 border border-blue-100 hover:shadow-2xl transition-shadow duration-300 group relative">
                         <div className="relative flex-shrink-0">
-                            <img
-                                src={profileData.photo ? (profileData.photo.startsWith('/uploads/') ? `${API_URL}${profileData.photo}` : profileData.photo) : '/default-avatar.png'}
-                                alt="Profile"
-                                className="w-40 h-40 rounded-full object-cover border-4 border-blue-300 shadow-lg group-hover:scale-105 group-hover:shadow-2xl transition-transform duration-300"
-                            />
+                                                         <img
+                                 src={profileData.photo ? (profileData.photo.startsWith('/uploads/') ? `${import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:5001' : 'http://167.172.66.203:5001')}${profileData.photo}` : profileData.photo) : '/default-avatar.png'}
+                                 alt="Profile"
+                                 className="w-40 h-40 rounded-full object-cover border-4 border-blue-300 shadow-lg group-hover:scale-105 group-hover:shadow-2xl transition-transform duration-300"
+                             />
                             <button
                                 onClick={() => fileInputRef.current?.click()}
                                 className="absolute bottom-2 right-2 bg-blue-600 text-white rounded-full p-3 shadow-lg hover:bg-blue-700 border-2 border-white transition"

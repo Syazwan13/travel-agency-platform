@@ -25,7 +25,7 @@ const UserDashboardSidebar = () => {
               user?.photo
                 ? user.photo.startsWith('http')
                   ? user.photo
-                  : `${import.meta.env.VITE_API_URL}${user.photo}`
+                  : `${import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:5001' : 'http://167.172.66.203:5001')}${user.photo}`
                 : '/default-avatar.png'
             }
             alt={user?.name || 'User'}

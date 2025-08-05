@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
+import api from '../../utils/apiConfig';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -42,12 +40,10 @@ const Register = () => {
         }
 
         try {
-            const response = await axios.post(`${API_URL}/api/users/register`, {
+            const response = await api.post('/api/users/register', {
                 name: formData.name,
                 email: formData.email,
                 password: formData.password
-            }, {
-                withCredentials: true
             });
 
             if (response.status === 201) {

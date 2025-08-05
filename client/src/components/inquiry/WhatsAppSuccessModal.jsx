@@ -123,10 +123,9 @@ const WhatsAppSuccessModal = ({ inquiryData, onClose }) => {
 
     setIsGenerating(true);
     try {
-      const response = await axios.post(
-        `${API_URL}/api/inquiries/${inquiryData.data._id}/generate-message`,
-        {},
-        { withCredentials: true }
+      const response = await api.post(
+        `/api/inquiries/${inquiryData.data._id}/generate-message`,
+        {}
       );
 
       // Ensure the message is always a string

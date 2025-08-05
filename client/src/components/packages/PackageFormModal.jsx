@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
+import api from '../../utils/apiConfig';
 
 const getProviderApiBase = (user) => {
   if (!user || user.role !== 'travel_agency') return null;
@@ -44,9 +42,9 @@ const PackageFormModal = ({ open, onClose, packageData, providerContactId, user 
       if (!apiBase) throw new Error('Unknown provider');
       let response;
       if (isEdit) {
-        response = await axios.put(`${API_URL}${apiBase}/${packageData._id}`, { ...form, provider: providerContactId }, { withCredentials: true });
-      } else {
-        response = await axios.post(`${API_URL}${apiBase}`, { ...form, provider: providerContactId }, { withCredentials: true });
+        response = await api.put(`${apiBase}/${packageData._id}`, { ...form, provider: providerContactId });
+              } else {
+          response = await api.post(`${apiBase}`, { ...form, provider: providerContactId });
       }
       if (response.data && response.data.success) {
         onClose();

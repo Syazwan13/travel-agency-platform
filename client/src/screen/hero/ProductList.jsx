@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { ProductCard } from "../../components/cards/ProductCard";
 import { Container, Heading } from "../../components/common/Design";
-import axios from "axios";
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
+import api from "../../utils/apiConfig";
 
 export const ProductList = () => {
     const [data, setData] = useState({ packages: [], activities: [] });
@@ -17,7 +15,7 @@ export const ProductList = () => {
             setLoading(true);
             setError(null);
             try {
-                const response = await axios.get(`${API_URL}/api/packages?destination=${selectedDestination}`);
+                const response = await api.get(`/api/packages?destination=${selectedDestination}`);
                 if (response.data.success) {
                     // Ensure data structure is valid
                     const responseData = response.data.data || {};

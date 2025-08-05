@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import SearchBar from '../../components/packages/SearchBar';
 import FilterPanel from '../../components/packages/FilterPanel';
 import PackageGrid from '../../components/packages/PackageGrid';
@@ -7,8 +7,6 @@ import ComparisonModal from '../../components/packages/ComparisonModal';
 import InquiryForm from '../../components/inquiry/InquiryForm';
 import WhatsAppSuccessModal from '../../components/inquiry/WhatsAppSuccessModal';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const PackageComparison = () => {
   const [packages, setPackages] = useState([]);
@@ -48,7 +46,7 @@ const PackageComparison = () => {
       setError(null);
 
       // Fetch packages from all sources (including those without coordinates)
-      const response = await axios.get(`${API_URL}/api/packages/`);
+      const response = await api.get('/api/packages/');
       const allPackages = response.data.data.packages || [];
 
       // Extract unique destinations and providers
@@ -68,7 +66,7 @@ const PackageComparison = () => {
 
   const fetchResorts = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/resorts`);
+      const response = await api.get('/api/resorts');
       setResorts(response.data.resorts || []);
     } catch (err) {
       console.error('Error fetching resorts:', err);
@@ -170,7 +168,7 @@ const PackageComparison = () => {
   const handleExternalClick = async (packageData) => {
     try {
       // Track click for analytics
-      await axios.post(`${API_URL}/api/packages/track-click`, {
+              await api.post('/api/packages/track-click', {
         packageId: packageData._id,
         source: packageData.source || packageData.provider,
         destination: packageData.destination

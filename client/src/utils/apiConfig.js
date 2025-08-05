@@ -14,12 +14,7 @@ const api = axios.create({
     baseURL: API_URL,
     withCredentials: true, // Always send credentials (cookies)
     headers: {
-        'Content-Type': 'application/json',
-        // Add explicit origin headers in production to help with CORS
-        ...(isProduction && {
-            'Origin': window.location.origin,
-            'X-Requested-With': 'XMLHttpRequest'
-        })
+        'Content-Type': 'application/json'
     }
 });
 

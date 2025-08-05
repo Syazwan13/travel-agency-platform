@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import TravelDetailsStep from './TravelDetailsStep';
 import AccommodationStep from './AccommodationStep';
 import SpecialRequirementsStep from './SpecialRequirementsStep';
@@ -9,8 +9,6 @@ import ReviewStep from './ReviewStep';
 import FormProgress from './FormProgress';
 import './InquiryForm.css';
 import WhatsAppSuccessModal from './WhatsAppSuccessModal';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 const InquiryForm = ({ packageData, onClose, onSuccess }) => {
   const { user } = useAuth();
@@ -207,9 +205,7 @@ const InquiryForm = ({ packageData, onClose, onSuccess }) => {
     try {
       console.log('Submitting inquiry for:', formData.packageInfo.packageTitle);
 
-      const response = await axios.post(`${API_URL}/api/inquiries`, formData, {
-        withCredentials: true
-      });
+              const response = await api.post('/api/inquiries', formData);
 
       console.log('✅ Inquiry submission successful!');
       console.log('InquiryForm - Response summary:', {

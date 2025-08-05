@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import { useAuth } from '../../context/AuthContext';
 import DashboardCard from '../../components/dashboard/DashboardCard';
 import AgencyPackageCard from '../../components/packages/AgencyPackageCard';
 import PackageFormModal from '../../components/packages/PackageFormModal';
 import { FaPlus, FaBox, FaSpinner } from 'react-icons/fa';
-
-const API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? "http://localhost:5001" : "http://167.172.66.203:5001");
 
 /**
  * Determines the API endpoint based on user's company/provider
@@ -49,9 +47,7 @@ const ManagePackages = () => {
         throw new Error('Provider not supported or user not authorized');
       }
       
-      const response = await axios.get(`${API_URL}${apiBase}/my`, { 
-        withCredentials: true 
-      });
+      const response = await api.get(`${apiBase}/my`);
       
       setMyPackages(response.data.data?.packages || []);
     } catch (err) {
@@ -109,9 +105,7 @@ const ManagePackages = () => {
         throw new Error('Provider not authorized');
       }
 
-      await axios.delete(`${API_URL}${apiBase}/${packageId}`, { 
-        withCredentials: true 
-      });
+                      await api.delete(`${apiBase}/${packageId}`);
       
       // Remove package from local state immediately for better UX
       setMyPackages(prev => prev.filter(pkg => pkg._id !== packageId));
