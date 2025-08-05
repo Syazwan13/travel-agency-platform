@@ -170,8 +170,8 @@ mongoose
   .connect(process.env.DATABASE_CLOUD, mongoOptions)
   .then(() => {
     console.log('MongoDB connected successfully');
-    const server = app.listen(PORT, () => {
-      console.log(`Server Running on http://localhost:${PORT}`);
+    const server = app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server Running on http://0.0.0.0:${PORT}`);
     });
 
     server.on('error', (error) => {
