@@ -19,6 +19,7 @@ const resortRoute = require('./routes/resortRoutes');
 const cronScheduler = require('./services/cronScheduler');
 const errorHandler = require('./middleware/errorMiddleWare');
 const feedbackRoutes = require('./routes/feedbackRoutes');
+const telegramBotService = require('./services/telegramService');
 
 // Ensure uploads/feedback-photos directory exists
 const feedbackPhotosDir = path.join(__dirname, 'uploads/feedback-photos');
@@ -157,6 +158,10 @@ app.get('*', (req, res) => {
 cronScheduler.init();
 console.log('Cron scheduler initialized');
 
+// ✅ Initialize Telegram bot
+telegramBotService.init();
+console.log('Telegram bot service initialized');
+
 // ✅ Connect to MongoDB
 const PORT = process.env.PORT || 5001;
 console.log('Attempting to connect to MongoDB...');
@@ -184,6 +189,32 @@ mongoose
 
     process.on('SIGTERM', () => {
       console.log('SIGTERM received. Shutting down gracefully...');
+      
+      // Shutdown Telegram bot
+      telegramBotService.shutdown();
+      
+      // Shutdown cron scheduler
+      cronScheduler.shutdown();
+      
+      server.close(() => {
+        console.log('Server closed');
+        mongoose.connection.close(false, () => {
+          console.log('MongoDB connection closed');
+          process.exit(0);
+        });
+      });
+    });
+
+    // Handle SIGINT (Ctrl+C)
+    process.on('SIGINT', () => {
+      console.log('SIGINT received. Shutting down gracefully...');
+      
+      // Shutdown Telegram bot
+      telegramBotService.shutdown();
+      
+      // Shutdown cron scheduler  
+      cronScheduler.shutdown();
+      
       server.close(() => {
         console.log('Server closed');
         mongoose.connection.close(false, () => {

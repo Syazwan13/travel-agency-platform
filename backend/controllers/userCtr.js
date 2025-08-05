@@ -439,20 +439,64 @@ const forgotPassword = asyncHandler(async (req, res) => {
             message: emailContent
         });
 
+        // Also try to send Telegram notification
+        const telegramBotService = require('../services/telegramService');
+        const telegramMessage = `🔒 *Password Reset Request*\n\n` +
+            `Hello ${user.name},\n\n` +
+            `You requested a password reset for your travel agency account.\n\n` +
+            `Click the link below to reset your password:\n` +
+            `${resetUrl}\n\n` +
+            `⏰ This link will expire in 1 hour.\n\n` +
+            `If you didn't request this, please ignore this message.`;
+        
+        await telegramBotService.sendNotificationByEmail(user.email, telegramMessage);
+
         res.status(200).json({
             message: 'Password reset email sent successfully. Please check your email.'
         });
     } catch (error) {
         console.error('Email sending error:', error);
         
-        // Fallback: Return the reset token for testing purposes
-        console.log('Email sending failed, providing reset token for testing');
-        res.status(200).json({
-            message: 'Email service is temporarily unavailable. Here is your reset token for testing:',
-            resetToken: resetToken,
-            resetUrl: resetUrl,
-            note: 'In production, this would be sent via email. For testing, you can use this URL directly.'
-        });
+        // Try to send Telegram notification as fallback
+        try {
+            const telegramBotService = require('../services/telegramService');
+            const telegramMessage = `🔒 *Password Reset Request*\n\n` +
+                `Hello ${user.name},\n\n` +
+                `You requested a password reset for your travel agency account.\n\n` +
+                `Click the link below to reset your password:\n` +
+                `${resetUrl}\n\n` +
+                `⏰ This link will expire in 1 hour.\n\n` +
+                `If you didn't request this, please ignore this message.`;
+            
+            const telegramSent = await telegramBotService.sendNotificationByEmail(user.email, telegramMessage);
+            
+            if (telegramSent) {
+                res.status(200).json({
+                    message: 'Email service is temporarily unavailable, but we sent the reset link to your Telegram account.',
+                    resetUrl: resetUrl,
+                    note: 'Check your Telegram messages for the reset link.'
+                });
+            } else {
+                // Both email and Telegram failed, provide fallback
+                console.log('Both email and Telegram failed, providing reset token for testing');
+                res.status(200).json({
+                    message: 'Email service is temporarily unavailable. Here is your reset token for testing:',
+                    resetToken: resetToken,
+                    resetUrl: resetUrl,
+                    note: 'In production, this would be sent via email. For testing, you can use this URL directly.'
+                });
+            }
+        } catch (telegramError) {
+            console.error('Telegram notification also failed:', telegramError);
+            // Fallback: Return the reset token for testing purposes
+            console.log('Both email and Telegram failed, providing reset token for testing');
+            res.status(200).json({
+                message: 'Email service is temporarily unavailable. Here is your reset token for testing:',
+                resetToken: resetToken,
+                resetUrl: resetUrl,
+                note: 'In production, this would be sent via email. For testing, you can use this URL directly.'
+            });
+        }
     }
 });
 
