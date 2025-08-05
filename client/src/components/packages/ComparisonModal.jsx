@@ -17,6 +17,13 @@ const ComparisonModal = ({ packages, onClose, onExternalClick }) => {
 
   const extractPrice = (priceString) => {
     if (!priceString) return 'Price on request';
+    
+    // If price already contains "RM", return as is
+    if (priceString.includes('RM')) {
+      return priceString;
+    }
+    
+    // Otherwise, extract number and add RM prefix
     const matches = priceString.match(/\d+/g);
     return matches ? `RM ${matches[0]}` : priceString;
   };

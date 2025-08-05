@@ -5,6 +5,13 @@ import './MapComponent.css';
 
 const formatPrice = (price) => {
   if (!price) return 'Price on request';
+  
+  // If price already contains "RM", return as is
+  if (price.toString().includes('RM')) {
+    return price;
+  }
+  
+  // Otherwise, extract number and add RM prefix
   const numericPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
   return !isNaN(numericPrice) ? `RM ${numericPrice.toFixed(2)}` : price;
 };

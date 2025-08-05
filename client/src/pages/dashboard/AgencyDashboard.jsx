@@ -278,7 +278,7 @@ const AgencyDashboard = () => {
                   <p className="text-gray-600 text-sm mb-3 line-clamp-2">{pkg.description}</p>
                   <div className="flex justify-between items-center mb-3">
                     <span className="text-2xl font-bold text-blue-600">
-                      RM {pkg.price?.toLocaleString()}
+                      {pkg.price?.toString().includes('RM') ? pkg.price : `RM ${pkg.price?.toLocaleString()}`}
                     </span>
                     <span className="text-sm text-gray-500">
                       {pkg.duration} days
