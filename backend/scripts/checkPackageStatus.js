@@ -1,6 +1,8 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
+const { HolidayGoGoPackage } = require('../models/holidayGoGoGoSchema');
 const { PulauMalaysiaPackage } = require('../models/pulauMalaysiaSchema');
+const AmiTravel = require('../models/amiTravelSchema');
 const ProviderContact = require('../models/providerContactModel');
 
 async function checkPackageStatus() {
@@ -8,13 +10,15 @@ async function checkPackageStatus() {
     await mongoose.connect(process.env.DATABASE_CLOUD);
     console.log('🔗 Connected to MongoDB');
     
-    const packages = await PulauMalaysiaPackage.find({}).populate('provider').select('title provider isActive destination price lastScraped');
+    // Get packages from all collections
+    const [holidayGoGoPackages, pulauMalaysiaPackages, amiTravelPackages] = await Promise.all([
+      HolidayGoGoPackage.find({}).populate('provider').select('title provider isActive destination price lastScraped'),
+      PulauMalaysiaPackage.find({}).populate('provider').select('title provider isActive destination price lastScraped'),
+      AmiTravel.find({}).populate('provider').select('title provider isActive destination price lastScraped')
+    ]);
     
     console.log('\n📊 === PACKAGE STATUS REPORT ===');
     console.log('================================');
-    
-    const holidayGoGoPackages = packages.filter(p => p.provider?.providerName === 'HolidayGoGoGo');
-    const amiTravelPackages = packages.filter(p => p.provider?.providerName === 'AmiTravel');
     
     console.log(`\n🏢 HolidayGoGoGo Packages (${holidayGoGoPackages.length} total):`);
     holidayGoGoPackages.forEach((pkg, i) => {
@@ -56,9 +60,15 @@ async function checkPackageStatus() {
       return daysSinceUpdate < 7; // Less than 7 days
     });
     
+    const recentPulauMalaysia = pulauMalaysiaPackages.filter(p => {
+      const daysSinceUpdate = (Date.now() - new Date(p.lastScraped)) / (1000 * 60 * 60 * 24);
+      return daysSinceUpdate < 7; // Less than 7 days
+    });
+    
     console.log(`\n🕒 === RECENT UPDATES (Last 7 days) ===`);
     console.log(`HolidayGoGoGo: ${recentHolidayGo.length}/${holidayGoGoPackages.length} packages updated recently`);
     console.log(`AmiTravel: ${recentAmiTravel.length}/${amiTravelPackages.length} packages updated recently`);
+    console.log(`PulauMalaysia: ${recentPulauMalaysia.length}/${pulauMalaysiaPackages.length} packages updated recently`);
     
     // Check provider contact status
     const providers = await ProviderContact.find({});
