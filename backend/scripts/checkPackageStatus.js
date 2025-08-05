@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Package = require('../models/pulauMalaysiaSchema');
+const { PulauMalaysiaPackage } = require('../models/pulauMalaysiaSchema');
 const ProviderContact = require('../models/providerContactModel');
 
 async function checkPackageStatus() {
@@ -8,7 +8,7 @@ async function checkPackageStatus() {
     await mongoose.connect(process.env.DATABASE_CLOUD);
     console.log('🔗 Connected to MongoDB');
     
-    const packages = await Package.find({}).populate('provider').select('title provider isActive destination price lastScraped');
+    const packages = await PulauMalaysiaPackage.find({}).populate('provider').select('title provider isActive destination price lastScraped');
     
     console.log('\n📊 === PACKAGE STATUS REPORT ===');
     console.log('================================');
