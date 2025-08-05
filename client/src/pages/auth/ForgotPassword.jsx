@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../utils/apiConfig';
+import TelegramBotInfo from '../../components/common/TelegramBotInfo';
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('');
@@ -109,6 +110,11 @@ const ForgotPassword = () => {
                             Sign up here
                         </Link>
                     </p>
+                </div>
+
+                {/* Telegram Bot Info */}
+                <div className="mt-6">
+                    <TelegramBotInfo />
                 </div>
             </div>
         </div>
