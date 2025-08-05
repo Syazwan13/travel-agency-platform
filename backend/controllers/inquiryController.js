@@ -211,7 +211,14 @@ const getUserInquiries = asyncHandler(async (req, res) => {
 // @route   GET /api/inquiries/:id
 // @access  Private
 const getInquiryById = asyncHandler(async (req, res) => {
-  const inquiry = await Inquiry.findById(req.params.id).populate('userId', 'name email');
+  // For feedback page, we only need basic inquiry data, not full user details
+  const inquiry = await Inquiry.findById(req.params.id, {
+    packageInfo: 1,
+    travelDetails: 1,
+    specialRequirements: 1,
+    userId: 1,
+    createdAt: 1
+  });
 
   if (!inquiry) {
     res.status(404);
@@ -219,7 +226,7 @@ const getInquiryById = asyncHandler(async (req, res) => {
   }
 
   // Check if user owns this inquiry or is admin
-  if (inquiry.userId && inquiry.userId._id.toString() !== req.user._id.toString() && req.user.role !== 'admin') {
+  if (inquiry.userId && inquiry.userId.toString() !== req.user._id.toString() && req.user.role !== 'admin') {
     res.status(403);
     throw new Error('Not authorized to view this inquiry');
   }

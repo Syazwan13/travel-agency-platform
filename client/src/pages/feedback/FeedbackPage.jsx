@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import axios from 'axios';
 import { Title, Container } from '../../components/common/Design';
 import { AiOutlineStar, AiFillStar } from 'react-icons/ai';
 import { BiCamera, BiSend, BiUser } from 'react-icons/bi';
 import { FiThumbsUp, FiThumbsDown } from 'react-icons/fi';
 
-function StarRating({ value, onChange, label }) {
+const StarRating = React.memo(({ value, onChange, label }) => {
+  const handleStarClick = useCallback((star) => {
+    onChange(star);
+  }, [onChange]);
+
   return (
     <div className="flex items-center justify-between mb-4 p-4 bg-gray-50 rounded-lg">
       <span className="text-gray-700 font-medium text-lg min-w-[120px]">{label}</span>
@@ -13,7 +17,7 @@ function StarRating({ value, onChange, label }) {
         {[1,2,3,4,5].map(star => (
           <button
             key={star}
-            onClick={() => onChange(star)}
+            onClick={() => handleStarClick(star)}
             className={`transition-all duration-200 hover:scale-110 ${
               star <= value ? 'text-yellow-400' : 'text-gray-300 hover:text-yellow-200'
             }`}
@@ -24,13 +28,14 @@ function StarRating({ value, onChange, label }) {
       </div>
     </div>
   );
-}
+});
 
 function FeedbackPage() {
-  const params = new URLSearchParams(window.location.search);
+  const params = useMemo(() => new URLSearchParams(window.location.search), []);
   const inquiryId = params.get('inquiryId');
   const [inquiry, setInquiry] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [inquiryLoading, setInquiryLoading] = useState(!!inquiryId);
+  const [inquiryError, setInquiryError] = useState('');
   const [rating, setRating] = useState(0);
   const [criteria, setCriteria] = useState({ service: 0, accommodation: 0, value: 0 });
   const [feedback, setFeedback] = useState('');
@@ -41,50 +46,59 @@ function FeedbackPage() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    async function fetchInquiry() {
+    if (!inquiryId) {
+      setInquiryLoading(false);
+      return;
+    }
+
+    const fetchInquiry = async () => {
       try {
         const res = await axios.get(`/api/inquiries/${inquiryId}`);
         setInquiry(res.data.data);
+        setInquiryError('');
       } catch (err) {
+        console.error('Failed to fetch inquiry:', err);
+        setInquiryError('Failed to load trip information');
         setInquiry(null);
       } finally {
-        setLoading(false);
+        setInquiryLoading(false);
       }
-    }
-    if (inquiryId) fetchInquiry();
+    };
+    
+    fetchInquiry();
   }, [inquiryId]);
 
-  const handlePhotoUpload = (e) => {
-    setPhotos([...photos, ...e.target.files]);
-  };
+  const handlePhotoUpload = useCallback((e) => {
+    setPhotos(prev => [...prev, ...e.target.files]);
+  }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
     if (!rating || !criteria.service || !criteria.accommodation || !criteria.value || !recommend || !feedback) {
       setError('Please fill in all required fields.');
       return;
     }
     setError('');
-    const formData = new FormData();
-    formData.append('inquiryId', inquiryId);
-    formData.append('rating', rating);
-    formData.append('feedback', feedback);
-    formData.append('recommend', recommend);
-    formData.append('anonymous', anonymous);
-    Object.entries(criteria).forEach(([key, value]) => formData.append(key, value));
-    photos.forEach(photo => formData.append('photos', photo));
-    await fetch('/api/feedback', { method: 'POST', body: formData });
-    setSubmitted(true);
-  };
+    
+    try {
+      const formData = new FormData();
+      formData.append('inquiryId', inquiryId);
+      formData.append('rating', rating);
+      formData.append('feedback', feedback);
+      formData.append('recommend', recommend);
+      formData.append('anonymous', anonymous);
+      Object.entries(criteria).forEach(([key, value]) => formData.append(key, value));
+      photos.forEach(photo => formData.append('photos', photo));
+      
+      await fetch('/api/feedback', { method: 'POST', body: formData });
+      setSubmitted(true);
+    } catch (err) {
+      setError('Failed to submit feedback. Please try again.');
+      console.error('Feedback submission error:', err);
+    }
+  }, [inquiryId, rating, criteria, feedback, recommend, anonymous, photos]);
 
-  if (loading) return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 flex justify-center items-center">
-      <div className="bg-white rounded-3xl shadow-lg p-8">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
-        <p className="text-gray-600 mt-4 text-center">Loading your feedback form...</p>
-      </div>
-    </div>
-  );
+  // Remove blocking loading - let the form show immediately
   
   if (submitted) return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 relative overflow-hidden">
@@ -136,26 +150,44 @@ function FeedbackPage() {
             </div>
 
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-              {/* Package Summary Header */}
-              {inquiry && (
+              {/* Trip Information Header - Shows loading, error, or data */}
+              {inquiryId && (
                 <div className="bg-gradient-to-r from-primary to-blue-600 p-8 text-white">
-                  <div className="flex items-center gap-6">
-                    <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-                      <img 
-                        src={inquiry.packageInfo?.packageImage || '/default-package.jpg'} 
-                        alt="Package" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <h2 className="text-2xl font-bold mb-2">{inquiry.packageInfo?.packageTitle}</h2>
-                      <div className="text-blue-100 flex items-center gap-4">
-                        <span>📅 {inquiry.travelDetails?.preferredDates?.startDate?.slice(0,10)}</span>
-                        <span>→</span>
-                        <span>{inquiry.travelDetails?.preferredDates?.endDate?.slice(0,10)}</span>
+                  {inquiryLoading ? (
+                    <div className="flex items-center gap-6">
+                      <div className="w-24 h-24 rounded-2xl bg-white/20 flex items-center justify-center">
+                        <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="bg-white/20 h-6 rounded mb-2 animate-pulse"></div>
+                        <div className="bg-white/10 h-4 w-2/3 rounded animate-pulse"></div>
                       </div>
                     </div>
-                  </div>
+                  ) : inquiryError ? (
+                    <div className="text-center py-4">
+                      <p className="text-red-100 mb-2">⚠️ {inquiryError}</p>
+                      <p className="text-blue-100 text-sm">You can still submit your feedback</p>
+                    </div>
+                  ) : inquiry ? (
+                    <div className="flex items-center gap-6">
+                      <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+                        <img 
+                          src={inquiry.packageInfo?.packageImage || '/default-package.jpg'} 
+                          alt="Package" 
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h2 className="text-2xl font-bold mb-2">{inquiry.packageInfo?.packageTitle}</h2>
+                        <div className="text-blue-100 flex items-center gap-4">
+                          <span>📅 {inquiry.travelDetails?.preferredDates?.startDate?.slice(0,10)}</span>
+                          <span>→</span>
+                          <span>{inquiry.travelDetails?.preferredDates?.endDate?.slice(0,10)}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
               )}
 
