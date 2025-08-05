@@ -5,6 +5,8 @@ import RoleSelection from './pages/auth/RoleSelection';
 import CustomerRegister from './pages/auth/CustomerRegister';
 import TravelAgencyRegister from './pages/auth/TravelAgencyRegister';
 import Login from './pages/auth/Login';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import ResetPassword from './pages/auth/ResetPassword';
 import PendingApproval from './pages/auth/PendingApproval';
 import SearchResults from './pages/search/SearchResults';
 import MapPage from './pages/map/MapPage';
@@ -118,6 +120,8 @@ function App() {
             <Route path="/register/user" element={<CustomerRegister />} />
             <Route path="/register/travel_agency" element={<TravelAgencyRegister />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/pending-approval" element={<PendingApproval />} />
             <Route
               path="/profile"

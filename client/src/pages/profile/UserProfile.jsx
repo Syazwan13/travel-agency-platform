@@ -4,6 +4,7 @@ import api from '../../utils/apiConfig';
 import React from 'react';
 import DashboardLayout from '../../components/dashboard/DashboardLayout';
 import TelegramNotificationModal, { shouldShowTelegramModal, resetTelegramModalPreference } from '../../components/common/TelegramNotificationModal';
+import ChangePasswordModal from '../../components/profile/ChangePasswordModal';
 
 const UserProfile = () => {
     const { user, checkAuthStatus } = useAuth();
@@ -11,6 +12,7 @@ const UserProfile = () => {
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
     const [editSection, setEditSection] = useState(null); // 'personal', 'address', or null
+    const [showPasswordModal, setShowPasswordModal] = useState(false);
     const fileInputRef = useRef(null);
     const [profileData, setProfileData] = useState({
         firstName: '',
@@ -290,6 +292,28 @@ const UserProfile = () => {
                             </div>
                         )}
                     </div>
+                    
+                    {/* Security Card */}
+                    <div className="bg-white shadow-lg rounded-2xl p-8 mb-8 border border-blue-100">
+                        <div className="flex justify-between items-center mb-6">
+                            <h2 className="text-2xl font-bold text-blue-800">Security</h2>
+                        </div>
+                        <div className="space-y-4">
+                            <div>
+                                <div className="text-xs text-gray-500 mb-2">Password</div>
+                                <div className="flex items-center justify-between">
+                                    <div className="font-medium text-lg">••••••••</div>
+                                    <button 
+                                        className="bg-blue-600 text-white px-5 py-2 rounded-full shadow hover:bg-blue-700 transition"
+                                        onClick={() => setShowPasswordModal(true)}
+                                    >
+                                        Change Password
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     {/* Telegram and Review Buttons */}
                     <div className="flex flex-col md:flex-row md:space-x-4 mt-8">
                         <div className="mb-4 md:mb-0">
@@ -329,6 +353,13 @@ const UserProfile = () => {
                     </div>
                 </div>
             </div>
+            <ChangePasswordModal 
+                isOpen={showPasswordModal}
+                onClose={() => setShowPasswordModal(false)}
+                onSuccess={() => {
+                    setSuccess('Password updated successfully!');
+                }}
+            />
         </>
     );
 };

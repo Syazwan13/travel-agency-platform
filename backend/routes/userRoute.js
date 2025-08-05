@@ -8,7 +8,7 @@ const { protect, isAdmin, isTravelAgency, isAdminOrTravelAgency } = require("../
 const { getUserBalance } = require("../controllers/userCtr");
 const { getAllUser } = require("../controllers/userCtr");
 const { estimateIncome } = require("../controllers/userCtr");
-const { addToFavorites, removeFromFavorites, getFavorites, addSearchHistory, getSearchHistory } = require("../controllers/userCtr");
+const { addToFavorites, removeFromFavorites, getFavorites, addSearchHistory, getSearchHistory, forgotPassword, resetPassword } = require("../controllers/userCtr");
 const router = express.Router();
 
 router.post("/register", registerUser);
@@ -29,5 +29,9 @@ router.get("/favorites", protect, getFavorites);
 // Search history routes
 router.post("/search-history", protect, addSearchHistory);
 router.get("/search-history", protect, getSearchHistory);
+
+// Password reset routes
+router.post("/forgot-password", forgotPassword);
+router.post("/reset-password", resetPassword);
 
 module.exports = router; 

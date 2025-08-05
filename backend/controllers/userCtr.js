@@ -384,6 +384,114 @@ const getUserBalance = asyncHandler(async (req, res) => {
     });
 });
 
+// @desc    Forgot password - send reset email
+// @route   POST /api/users/forgot-password
+// @access  Public
+const forgotPassword = asyncHandler(async (req, res) => {
+    const { email } = req.body;
+
+    if (!email) {
+        res.status(400);
+        throw new Error('Please provide your email address');
+    }
+
+    const user = await User.findOne({ email });
+    if (!user) {
+        res.status(404);
+        throw new Error('User not found with this email address');
+    }
+
+    // Generate reset token
+    const resetToken = jwt.sign(
+        { id: user._id, email: user.email },
+        process.env.JWT_SECRET,
+        { expiresIn: '1h' }
+    );
+
+    // Create reset URL
+    const resetUrl = `${req.protocol}://${req.get('host')}/reset-password?token=${resetToken}`;
+
+    // Email content
+    const emailContent = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #1E40AF;">Password Reset Request</h2>
+            <p>Hello ${user.name},</p>
+            <p>You requested a password reset for your travel agency account.</p>
+            <p>Click the button below to reset your password:</p>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="${resetUrl}" 
+                   style="background-color: #1E40AF; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">
+                    Reset Password
+                </a>
+            </div>
+            <p>This link will expire in 1 hour.</p>
+            <p>If you didn't request this password reset, please ignore this email.</p>
+            <p>Best regards,<br>Travel Agency Team</p>
+        </div>
+    `;
+
+    try {
+        // Send email using your existing email service
+        const sendMail = require('../utils/sendMail');
+        await sendMail({
+            email: user.email,
+            subject: 'Password Reset Request',
+            message: emailContent
+        });
+
+        res.status(200).json({
+            message: 'Password reset email sent successfully. Please check your email.'
+        });
+    } catch (error) {
+        console.error('Email sending error:', error);
+        res.status(500);
+        throw new Error('Failed to send password reset email. Please try again.');
+    }
+});
+
+// @desc    Reset password with token
+// @route   POST /api/users/reset-password
+// @access  Public
+const resetPassword = asyncHandler(async (req, res) => {
+    const { token, newPassword } = req.body;
+
+    if (!token || !newPassword) {
+        res.status(400);
+        throw new Error('Please provide token and new password');
+    }
+
+    if (newPassword.length < 6) {
+        res.status(400);
+        throw new Error('Password must be at least 6 characters long');
+    }
+
+    try {
+        // Verify token
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        
+        // Find user
+        const user = await User.findById(decoded.id);
+        if (!user) {
+            res.status(404);
+            throw new Error('User not found');
+        }
+
+        // Update password
+        user.password = newPassword;
+        await user.save();
+
+        res.status(200).json({
+            message: 'Password reset successfully. You can now login with your new password.'
+        });
+    } catch (error) {
+        if (error.name === 'JsonWebTokenError' || error.name === 'TokenExpiredError') {
+            res.status(400);
+            throw new Error('Invalid or expired reset token. Please request a new password reset.');
+        }
+        throw error;
+    }
+});
+
 // @desc    Get all users (admin only)
 // @route   GET /api/users
 // @access  Private/Admin
@@ -417,6 +525,8 @@ module.exports = {
     addSearchHistory,
     getSearchHistory,
     getUserBalance,
+    forgotPassword,
+    resetPassword,
     getAllUser,
     estimateIncome
 };
