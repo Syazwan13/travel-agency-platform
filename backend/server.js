@@ -138,16 +138,35 @@ app.use("/api/inquiries", inquiryRoute);
 app.use('/api/resorts', resortRoute);
 app.use('/api/feedback', feedbackRoutes);
 
+// ✅ Test route to check if image exists
+app.get('/test-image', (req, res) => {
+  const imagePath = path.join(__dirname, '../client/dist/images/home/hero-travel.jpg');
+  const exists = fs.existsSync(imagePath);
+  res.json({
+    success: true,
+    imageExists: exists,
+    imagePath: imagePath,
+    message: exists ? 'Image file found' : 'Image file not found'
+  });
+});
+
 console.log('Routes configured');
 
 // ✅ Serve static files from uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// ✅ Serve static files from client dist directory (IMAGES MUST COME BEFORE CATCH-ALL)
+app.use(express.static(path.join(__dirname, '../client/dist'), {
+  setHeaders: (res, path) => {
+    // Log static file requests for debugging
+    if (path.includes('.jpg') || path.includes('.png') || path.includes('.gif')) {
+      console.log('📁 Serving static file:', path);
+    }
+  }
+}));
+
 // ✅ Error handler
 app.use(errorHandler);
-
-// ✅ Serve static files from client dist directory
-app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // ✅ Catch-all route for frontend (must be last)
 app.get('*', (req, res) => {

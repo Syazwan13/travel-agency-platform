@@ -145,28 +145,32 @@ const PackageCard = ({
     source: pkg.source || pkg.provider || 'Package'
   };
 
-  // Enhanced handler for Locate on Map
+  // Enhanced handler for Locate on Map with prioritized coordinate sources
   const handleLocateOnMap = async () => {
     console.log('🗺️ Locating resort on map for:', pkg.resort || pkg.title);
     
     let coords = null;
+    let coordSource = '';
     
-    // 1. Always prefer pkg.location.coordinates if available
+    // 1. PRIORITY: Always prefer pkg.location.coordinates (synchronized coordinates)
     if (pkg.location && Array.isArray(pkg.location.coordinates) && pkg.location.coordinates.length === 2) {
       coords = pkg.location.coordinates;
+      coordSource = 'package.location (synchronized)';
       console.log('✅ Found coordinates in pkg.location:', coords, 'Type:', typeof coords[0], typeof coords[1]);
       console.log('📍 Raw pkg.location object:', pkg.location);
     } 
-    // 2. Check pkg.coordinates as fallback
+    // 2. FALLBACK: Check pkg.coordinates 
     else if (pkg.coordinates && Array.isArray(pkg.coordinates) && pkg.coordinates.length === 2) {
       coords = pkg.coordinates;
+      coordSource = 'package.coordinates';
       console.log('✅ Found coordinates in pkg.coordinates:', coords, 'Type:', typeof coords[0], typeof coords[1]);
     } 
-    // 3. Search in resorts array if available
+    // 3. FALLBACK: Search in resorts array if available
     else if (resorts && pkg.resort) {
       const match = resorts.find(r => normalizeResortName(r.name) === normalizeResortName(pkg.resort));
       if (match && match.coordinates && match.coordinates.length === 2) {
         coords = match.coordinates;
+        coordSource = 'resorts array lookup';
         console.log('✅ Found coordinates in resorts array:', coords, 'Type:', typeof coords[0], typeof coords[1]);
       } else {
         console.log('❌ No matching resort found in resorts array for:', pkg.resort);
@@ -183,7 +187,10 @@ const PackageCard = ({
       
       if (isValidNumbers) {
         console.log('🎯 Using valid coordinates:', coords);
+        console.log('📍 Coordinate source:', coordSource);
         console.log('📍 Coordinates details:', { lng, lat, withinBounds: lng >= 99.0 && lng <= 119.0 && lat >= 0.8 && lat <= 7.5 });
+        
+        // Update MiniMap with validated coordinates
         setMiniMapCoords(coords);
         setShowMiniMap(v => !v);
         return;
@@ -193,9 +200,9 @@ const PackageCard = ({
       }
     }
 
-    // 4. If still no coords, try to fetch from backend API
+    // 4. LAST RESORT: If still no coords, try to fetch from backend API
     if (pkg.resort) {
-      console.log('🔍 No local coordinates found, fetching from backend for:', pkg.resort);
+      console.log('🔍 No valid coordinates found locally, fetching from backend API for:', pkg.resort);
       setMiniMapLoading(true);
       
       try {
@@ -207,7 +214,8 @@ const PackageCard = ({
         console.log('📡 API response:', res.data);
         
         if (res.data && res.data.success && res.data.coordinates && res.data.coordinates.length === 2) {
-          console.log('✅ Successfully fetched coordinates:', res.data.coordinates);
+          console.log('✅ Successfully fetched coordinates from API:', res.data.coordinates);
+          console.log('📍 API coordinate source: backend geocode lookup');
           setMiniMapCoords(res.data.coordinates);
           setShowMiniMap(true);
         } else {

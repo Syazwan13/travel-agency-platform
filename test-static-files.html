@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static File Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Static File Serving Test</h1>
+        <p>This page tests if static files are being served correctly by the backend server.</p>
+        
+        <div id="test-results">
+            <div class="test-result info">Running tests...</div>
+        </div>
+        
+        <h3>Test 1: Hero Travel Image</h3>
+        <img src="/images/home/hero-travel.jpg" alt="Hero Travel Test" 
+             onload="showResult('hero-travel', true)" 
+             onerror="showResult('hero-travel', false)">
+        
+        <h3>Test 2: Beach Image (Fallback)</h3>
+        <img src="/images/home/beach.jpg" alt="Beach Test" 
+             onload="showResult('beach', true)" 
+             onerror="showResult('beach', false)">
+        
+        <h3>Test 3: API Test</h3>
+        <div id="api-test" class="test-result info">Testing API endpoint...</div>
+    </div>
+    
+    <script>
+        function showResult(testName, success) {
+            const resultsDiv = document.getElementById('test-results');
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `test-result ${success ? 'success' : 'error'}`;
+            resultDiv.textContent = `${success ? '✅' : '❌'} ${testName}: ${success ? 'Loaded successfully' : 'Failed to load'}`;
+            resultsDiv.appendChild(resultDiv);
+        }
+        
+        // Test API endpoint
+        fetch('/test-image')
+            .then(response => response.json())
+            .then(data => {
+                const apiTestDiv = document.getElementById('api-test');
+                apiTestDiv.className = `test-result ${data.imageExists ? 'success' : 'error'}`;
+                apiTestDiv.innerHTML = `
+                    ${data.imageExists ? '✅' : '❌'} API Test: ${data.message}<br>
+                    <small>Path: ${data.imagePath}</small>
+                `;
+            })
+            .catch(error => {
+                const apiTestDiv = document.getElementById('api-test');
+                apiTestDiv.className = 'test-result error';
+                apiTestDiv.textContent = `❌ API Test: Failed to connect - ${error.message}`;
+            });
+    </script>
+</body>
+</html> 

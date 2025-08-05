@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdMap } from "react-icons/md";
 import SearchBar from '../../components/packages/SearchBar';
+import ProductionImage from '../../components/common/ProductionImage';
 
 export const User1 = "https://cdn-icons-png.flaticon.com/128/6997/6997662.png";
 export const User2 = "https://cdn-icons-png.flaticon.com/128/236/236832.png";
@@ -90,10 +91,11 @@ export const Hero = () => {
                         {/* Right: Hero image and feature boxes */}
                         <div className="flex-1 flex flex-col items-center gap-8 justify-center">
                             <div className="rounded-3xl bg-blue-200 bg-opacity-40 shadow-lg flex items-center justify-center w-[340px] h-[320px] md:w-[400px] md:h-[360px] lg:w-[440px] lg:h-[400px] border-4 border-blue-100">
-                                <img
-                                    src="/images/home/hero travel.jpg"
+                                <ProductionImage
+                                    src="/images/home/hero-travel.jpg"
                                     alt="Travel Hero"
-                                    className="object-cover w-full h-full rounded-2xl shadow-md"
+                                    fallbackSrc="/images/home/beach.jpg"
+                                    className="w-full h-full"
                                 />
                             </div>
                             <div className="flex flex-col gap-4 w-full max-w-[440px]">
