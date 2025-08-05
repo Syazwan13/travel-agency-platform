@@ -44,10 +44,9 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 // ✅ Middleware
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
 app.use(cookieParser());
-app.use(express.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false, limit: '10mb' }));
 
 // CORS configuration - Enhanced for both specific environments and troubleshooting
 app.use(cors({
