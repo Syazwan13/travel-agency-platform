@@ -101,10 +101,6 @@ app.use(cors({
 
 console.log('CORS configured for local, production and troubleshooting');
 
-// ✅ Serve static files from uploads directory
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-app.use(express.static(path.join(__dirname, '../client/dist')));
-
 // ✅ Routes
 app.get('/', (req, res) => {
   res.json({ message: 'Travel scraping API is running...', timestamp: new Date().toISOString() });
@@ -143,8 +139,14 @@ app.use('/api/feedback', feedbackRoutes);
 
 console.log('Routes configured');
 
+// ✅ Serve static files from uploads directory
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 // ✅ Error handler
 app.use(errorHandler);
+
+// ✅ Serve static files from client dist directory
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // ✅ Catch-all route for frontend (must be last)
 app.get('*', (req, res) => {
