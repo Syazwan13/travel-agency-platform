@@ -152,21 +152,34 @@ const PackageCard = ({
     let coords = null;
     let coordSource = '';
     
-    // 1. PRIORITY: Always prefer pkg.location.coordinates (synchronized coordinates)
-    if (pkg.location && Array.isArray(pkg.location.coordinates) && pkg.location.coordinates.length === 2) {
-      coords = pkg.location.coordinates;
-      coordSource = 'package.location (synchronized)';
-      console.log('✅ Found coordinates in pkg.location:', coords, 'Type:', typeof coords[0], typeof coords[1]);
+    // 1. PRIORITY: Check pkg.location object format (lat/lng properties)
+    if (pkg.location && typeof pkg.location === 'object') {
       console.log('📍 Raw pkg.location object:', pkg.location);
-    } 
+      
+      // Handle object format with lat/lng properties
+      if (typeof pkg.location.lat === 'number' && typeof pkg.location.lng === 'number') {
+        coords = [pkg.location.lng, pkg.location.lat]; // Convert to [lng, lat] array format
+        coordSource = 'package.location (object format)';
+        console.log('✅ Found coordinates in pkg.location object:', { lat: pkg.location.lat, lng: pkg.location.lng });
+        console.log('✅ Converted to array format:', coords);
+      }
+      // Handle array format in coordinates property
+      else if (Array.isArray(pkg.location.coordinates) && pkg.location.coordinates.length === 2) {
+        coords = pkg.location.coordinates;
+        coordSource = 'package.location.coordinates (array format)';
+        console.log('✅ Found coordinates in pkg.location.coordinates:', coords);
+      }
+    }
+    
     // 2. FALLBACK: Check pkg.coordinates 
-    else if (pkg.coordinates && Array.isArray(pkg.coordinates) && pkg.coordinates.length === 2) {
+    if (!coords && pkg.coordinates && Array.isArray(pkg.coordinates) && pkg.coordinates.length === 2) {
       coords = pkg.coordinates;
       coordSource = 'package.coordinates';
       console.log('✅ Found coordinates in pkg.coordinates:', coords, 'Type:', typeof coords[0], typeof coords[1]);
     } 
+    
     // 3. FALLBACK: Search in resorts array if available
-    else if (resorts && pkg.resort) {
+    if (!coords && resorts && pkg.resort) {
       const match = resorts.find(r => normalizeResortName(r.name) === normalizeResortName(pkg.resort));
       if (match && match.coordinates && match.coordinates.length === 2) {
         coords = match.coordinates;
