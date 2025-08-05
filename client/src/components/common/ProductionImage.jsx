@@ -27,6 +27,7 @@ const ProductionImage = ({
     const handleImageError = (e) => {
         console.error('❌ Image failed to load:', imageSrc);
         console.error('Error details:', e);
+        console.error('Current URL being attempted:', e.target?.src);
         
         setIsLoading(false);
         setHasError(true);
@@ -40,6 +41,7 @@ const ProductionImage = ({
         } else {
             // If fallback also failed, show error state
             console.error('❌ Both primary and fallback images failed');
+            console.error('Production note: Image should be served from backend at:', `${window.location.origin}${imageSrc}`);
         }
     };
 

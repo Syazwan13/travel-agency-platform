@@ -157,13 +157,41 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // ✅ Serve static files from client dist directory (IMAGES MUST COME BEFORE CATCH-ALL)
 app.use(express.static(path.join(__dirname, '../client/dist'), {
-  setHeaders: (res, path) => {
+  setHeaders: (res, filePath) => {
     // Log static file requests for debugging
-    if (path.includes('.jpg') || path.includes('.png') || path.includes('.gif')) {
-      console.log('📁 Serving static file:', path);
+    if (filePath.includes('.jpg') || filePath.includes('.png') || filePath.includes('.gif')) {
+      console.log('📁 Serving static file:', filePath);
+      // Set proper cache headers for images
+      res.setHeader('Cache-Control', 'public, max-age=31536000');
+      res.setHeader('Access-Control-Allow-Origin', '*');
     }
   }
 }));
+
+// ✅ Add explicit route for testing image serving
+app.get('/test-image', (req, res) => {
+  const imagePath = path.join(__dirname, '../client/dist/images/home/hero-travel.jpg');
+  console.log('🧪 Testing image at path:', imagePath);
+  
+  if (fs.existsSync(imagePath)) {
+    console.log('✅ Image file exists');
+    res.json({ 
+      status: 'success', 
+      imagePath: '/images/home/hero-travel.jpg',
+      fullPath: imagePath,
+      exists: true 
+    });
+  } else {
+    console.log('❌ Image file not found');
+    res.status(404).json({ 
+      status: 'error', 
+      message: 'Image not found',
+      imagePath: '/images/home/hero-travel.jpg',
+      fullPath: imagePath,
+      exists: false 
+    });
+  }
+});
 
 // ✅ Error handler
 app.use(errorHandler);
