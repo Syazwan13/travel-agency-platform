@@ -52,6 +52,10 @@ const amiTravelSchema = new mongoose.Schema({
   lastScraped: {
     type: Date,
     default: Date.now
+  },
+  isActive: {
+    type: Boolean,
+    default: true
   }
 }, { collection: 'amitravel' });
 
