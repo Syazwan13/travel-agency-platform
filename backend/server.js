@@ -3,7 +3,6 @@ require('dotenv').config(); // Automatically loads .env in the same folder
 
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
