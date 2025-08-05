@@ -140,17 +140,20 @@ app.use("/api/scraping", scrapingRoute);
 app.use("/api/inquiries", inquiryRoute);
 app.use('/api/resorts', resortRoute);
 app.use('/api/feedback', feedbackRoutes);
+
+console.log('Routes configured');
+
+// ✅ Error handler
+app.use(errorHandler);
+
+// ✅ Catch-all route for frontend (must be last)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
-console.log('Routes configured');
 
 // ✅ Initialize cron
 cronScheduler.init();
 console.log('Cron scheduler initialized');
-
-// ✅ Error handler
-app.use(errorHandler);
 
 // ✅ Connect to MongoDB
 const PORT = process.env.PORT || 5001;
