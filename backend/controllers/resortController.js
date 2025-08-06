@@ -23,15 +23,31 @@ function extractResortName(fullTitle) {
 const getGoogleReviews = async (req, res) => {
   const fullName = req.query.name;
   if (!fullName) return res.status(400).json({ error: 'Missing resort name' });
+  
   const name = extractResortName(fullName);
+  console.log(`🔍 Getting Google reviews for: "${name}" (original: "${fullName}")`);
+  
   try {
-    const apiKey = process.env.GOOGLE_API_KEY;
-    if (!apiKey) return res.status(500).json({ error: 'Google API key not set in environment' });
+    const apiKey = process.env.GOOGLE_API_KEY || process.env.GOOGLE_MAPS_API_KEY;
+    if (!apiKey) {
+      console.warn('⚠️ Google API key not configured');
+      return res.json({ reviews: [], error: 'Google API key not configured', usedName: name });
+    }
+    
     const reviews = await getGooglePlacesReviews(name, apiKey, 10);
+    console.log(`✅ Found ${reviews.length} Google reviews for "${name}"`);
     res.json({ reviews, usedName: name });
+    
   } catch (err) {
-    console.error('Google Reviews API Error:', err);
-    res.status(500).json({ error: 'Failed to fetch Google reviews', details: err.message || err.toString() });
+    console.error('❌ Google Reviews API Error:', err.message || err);
+    
+    // Return empty reviews instead of error to avoid breaking the UI
+    res.json({ 
+      reviews: [], 
+      error: 'Failed to fetch Google reviews',
+      details: err.message || err.toString(),
+      usedName: name 
+    });
   }
 };
 

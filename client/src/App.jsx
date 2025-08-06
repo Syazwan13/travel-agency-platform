@@ -23,6 +23,7 @@ import PackageComparison from './pages/packages/PackageComparison';
 import AboutPage from './pages/about/AboutPage';
 import ApiDebug from './pages/debug/ApiDebug';
 import TestPage from './pages/test/TestPage';
+import ReviewsTest from './pages/test/ReviewsTest';
 import FeedbackPage from './pages/feedback/FeedbackPage';
 import ContactPage from './pages/contact/ContactPage';
 import ManagePackages from './pages/dashboard/ManagePackages';
@@ -92,6 +93,13 @@ function App() {
               element={
                 <DashboardLayout title="Test Page">
                   <TestPage />
+                </DashboardLayout>
+              }
+            />
+            <Route path="/test/reviews"
+              element={
+                <DashboardLayout title="Reviews Test">
+                  <ReviewsTest />
                 </DashboardLayout>
               }
             />

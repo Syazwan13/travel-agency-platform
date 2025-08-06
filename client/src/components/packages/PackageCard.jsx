@@ -62,22 +62,47 @@ const PackageCard = ({
   useEffect(() => {
     if (showGoogleReviews && googleReviews.length === 0 && pkg.resort) {
       setLoadingGoogleReviews(true);
-      fetch(`/api/resorts/google-reviews?name=${encodeURIComponent(pkg.resort)}`)
+      const resortName = pkg.resort || pkg.title || 'Resort';
+      fetch(`/api/resorts/google-reviews?name=${encodeURIComponent(resortName)}`)
         .then(res => res.json())
-        .then(data => setGoogleReviews(data.reviews || []))
-        .catch(() => setGoogleReviews([]))
+        .then(data => {
+          console.log('Google reviews response:', data);
+          setGoogleReviews(data.reviews || []);
+          if (data.error) {
+            console.warn('Google reviews API issue:', data.error);
+          }
+        })
+        .catch(err => {
+          console.error('Failed to fetch Google reviews:', err);
+          setGoogleReviews([]);
+        })
         .finally(() => setLoadingGoogleReviews(false));
     }
-  }, [showGoogleReviews, pkg.resort]);
+  }, [showGoogleReviews, pkg.resort, pkg.title]);
 
   // Fetch user reviews
   useEffect(() => {
     if (showUserReviews && userReviews.length === 0 && pkg._id) {
       setLoadingUserReviews(true);
+      console.log(`Fetching user reviews for package: ${pkg._id}`);
       fetch(`/api/feedback/package/${pkg._id}`)
         .then(res => res.json())
-        .then(data => setUserReviews(data || []))
-        .catch(() => setUserReviews([]))
+        .then(data => {
+          console.log(`User reviews response for ${pkg._id}:`, data);
+          if (Array.isArray(data)) {
+            setUserReviews(data);
+            if (data.length > 0) {
+              console.log(`✅ Found ${data.length} user reviews for package ${pkg._id}`);
+            }
+          } else {
+            console.warn('Unexpected user reviews response format:', data);
+            setUserReviews([]);
+          }
+        })
+        .catch(err => {
+          console.error('Failed to fetch user reviews:', err);
+          setUserReviews([]);
+        })
         .finally(() => setLoadingUserReviews(false));
     }
   }, [showUserReviews, pkg._id]);
@@ -422,7 +447,10 @@ const PackageCard = ({
           <div>
             <button
               className="text-blue-600 underline text-sm font-medium mb-2 flex items-center"
-              onClick={() => setShowGoogleReviews(v => !v)}
+              onClick={() => {
+                console.log('Google reviews button clicked', { showGoogleReviews, pkg: pkg });
+                setShowGoogleReviews(v => !v);
+              }}
             >
               <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -452,7 +480,10 @@ const PackageCard = ({
           <div>
             <button
               className="text-green-600 underline text-sm font-medium mb-2 flex items-center"
-              onClick={() => setShowUserReviews(v => !v)}
+              onClick={() => {
+                console.log('User reviews button clicked', { showUserReviews, pkgId: pkg._id });
+                setShowUserReviews(v => !v);
+              }}
             >
               <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
