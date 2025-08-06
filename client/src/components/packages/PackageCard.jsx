@@ -6,7 +6,7 @@ import MiniMap from '../Map/MiniMap';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { useAuth } from '../../context/AuthContext';
 import { normalizeResortName } from '../../utils/resortPackageMatching';
-import axios from 'axios'; // <-- Add axios for backend call
+import api from '../../utils/apiConfig'; // <-- Use configured API instance
 
 const PackageCard = ({
   package: pkg,
@@ -63,9 +63,9 @@ const PackageCard = ({
     if (showGoogleReviews && googleReviews.length === 0 && pkg.resort) {
       setLoadingGoogleReviews(true);
       const resortName = pkg.resort || pkg.title || 'Resort';
-      fetch(`/api/resorts/google-reviews?name=${encodeURIComponent(resortName)}`)
-        .then(res => res.json())
-        .then(data => {
+      api.get(`/api/resorts/google-reviews?name=${encodeURIComponent(resortName)}`)
+        .then(response => {
+          const data = response.data;
           console.log('Google reviews response:', data);
           // Ensure we always have an array for reviews
           const reviews = Array.isArray(data.reviews) ? data.reviews : [];
@@ -92,9 +92,9 @@ const PackageCard = ({
     if (showUserReviews && userReviews.length === 0 && pkg._id) {
       setLoadingUserReviews(true);
       console.log(`Fetching user reviews for package: ${pkg._id}`);
-      fetch(`/api/feedback/package/${pkg._id}`)
-        .then(res => res.json())
-        .then(data => {
+      api.get(`/api/feedback/package/${pkg._id}`)
+        .then(response => {
+          const data = response.data;
           console.log(`User reviews response for ${pkg._id}:`, data);
           // Ensure we always have an array to prevent map errors
           if (Array.isArray(data)) {

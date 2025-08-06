@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { APIProvider, Map, AdvancedMarker, Pin, InfoWindow } from '@vis.gl/react-google-maps';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import './MapComponent.css';
 
 const formatPrice = (price) => {
@@ -461,16 +461,16 @@ const GoogleMapComponent = ({ searchQuery = '' }) => {
   const forceRefreshResortData = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/resorts/coordinates', {
+      const response = await api.get('/api/resorts/coordinates', {
         headers: {
           'Cache-Control': 'no-cache',
           'Pragma': 'no-cache'
         }
       });
-      if (!response.ok) {
+      if (response.status !== 200) {
         throw new Error('Failed to refresh resort data');
       }
-      const data = await response.json();
+      const data = response.data;
       console.log('Refreshed resort data:', data);
       setResorts(data);
       // The transformedResorts memo will automatically update

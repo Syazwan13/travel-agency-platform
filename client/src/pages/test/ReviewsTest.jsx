@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 
 const ReviewsTest = () => {
   const [packageId, setPackageId] = useState('');
@@ -27,7 +27,7 @@ const ReviewsTest = () => {
     addLog(`Testing user reviews for package: ${packageId}`, 'info');
 
     try {
-      const response = await axios.get(`/api/feedback/package/${packageId}`);
+      const response = await api.get(`/api/feedback/package/${packageId}`);
       console.log('User reviews API response:', response.data);
       
       // Handle both array responses and error objects
@@ -61,7 +61,7 @@ const ReviewsTest = () => {
 
     try {
       // First get package info to extract resort name
-      const debugResponse = await axios.get(`/api/feedback/debug/${packageId}`);
+      const debugResponse = await api.get(`/api/feedback/debug/${packageId}`);
       const packageInfo = debugResponse.data;
       
       let resortName = 'Test Resort';
@@ -75,7 +75,7 @@ const ReviewsTest = () => {
 
       addLog(`Using resort name: ${resortName}`, 'info');
 
-      const response = await axios.get(`/api/resorts/google-reviews?name=${encodeURIComponent(resortName)}`);
+      const response = await api.get(`/api/resorts/google-reviews?name=${encodeURIComponent(resortName)}`);
       setGoogleReviews(response.data);
       addLog(`✅ Google reviews API success: ${response.data.reviews?.length || 0} reviews found`, 'success');
       
@@ -100,7 +100,7 @@ const ReviewsTest = () => {
     addLog(`Getting debug info for package: ${packageId}`, 'info');
 
     try {
-      const response = await axios.get(`/api/feedback/debug/${packageId}`);
+      const response = await api.get(`/api/feedback/debug/${packageId}`);
       setDebugInfo(response.data);
       addLog(`✅ Debug info retrieved successfully`, 'success');
     } catch (error) {

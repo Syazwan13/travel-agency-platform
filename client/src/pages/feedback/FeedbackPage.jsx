@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import { Title, Container } from '../../components/common/Design';
 import { AiOutlineStar, AiFillStar } from 'react-icons/ai';
 import { BiCamera, BiSend, BiUser } from 'react-icons/bi';
@@ -53,7 +53,7 @@ function FeedbackPage() {
 
     const fetchInquiry = async () => {
       try {
-        const res = await axios.get(`/api/inquiries/${inquiryId}`);
+        const res = await api.get(`/api/inquiries/${inquiryId}`);
         setInquiry(res.data.data);
         setInquiryError('');
       } catch (err) {
@@ -90,7 +90,11 @@ function FeedbackPage() {
       Object.entries(criteria).forEach(([key, value]) => formData.append(key, value));
       photos.forEach(photo => formData.append('photos', photo));
       
-      await fetch('/api/feedback', { method: 'POST', body: formData });
+              await api.post('/api/feedback', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        });
       setSubmitted(true);
     } catch (err) {
       setError('Failed to submit feedback. Please try again.');
