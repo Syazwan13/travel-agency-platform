@@ -487,12 +487,12 @@ const GoogleMapComponent = ({ searchQuery = '' }) => {
       setLoading(true);
       try {
         // 1) Fetch all resorts from geocache (Google Maps API results)
-        const resortsRes = await axios.get(`${import.meta.env.VITE_API_URL}/api/resorts`);
+        const resortsRes = await api.get('/api/resorts');
         console.log('Resorts response:', resortsRes.data);
         const resortsData = resortsRes.data.resorts || [];
         
         // 2) Fetch ALL packages (not just those with coordinates)
-        const packagesRes = await axios.get(`${import.meta.env.VITE_API_URL}/api/packages`);
+        const packagesRes = await api.get('/api/packages');
         console.log('Packages response:', packagesRes.data);
         console.log('Number of packages fetched:', packagesRes.data.data.packages?.length || 0);
         const packages = packagesRes.data.data.packages || [];

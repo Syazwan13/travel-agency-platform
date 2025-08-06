@@ -256,10 +256,9 @@ const PackageCard = ({
       
       try {
         const encodedResortName = encodeURIComponent(pkg.resort);
-        const apiUrl = `${import.meta.env.VITE_API_URL || ''}/api/resorts/geocode?name=${encodedResortName}`;
-        console.log('📡 Making API request to:', apiUrl);
+        console.log('📡 Making API request to geocode resort:', encodedResortName);
         
-        const res = await axios.get(apiUrl);
+        const res = await api.get(`/api/resorts/geocode?name=${encodedResortName}`);
         console.log('📡 API response:', res.data);
         
         if (res.data && res.data.success && res.data.coordinates && res.data.coordinates.length === 2) {

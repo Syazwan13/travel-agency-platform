@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import GoogleMapComponent from '../../components/Map/GoogleMapComponent';
 import SearchBar from '../../components/packages/SearchBar';
-import axios from 'axios';
+import api from '../../utils/apiConfig';
 import './MapPage.css';
 
 
@@ -16,7 +16,7 @@ const MapPage = () => {
     const fetchSearchSuggestions = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('/api/resorts/search-suggestions');
+        const response = await api.get('/api/resorts/search-suggestions');
         if (response.data.success) {
           setSearchSuggestions(response.data.suggestions);
         }
