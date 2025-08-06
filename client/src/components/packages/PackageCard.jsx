@@ -67,9 +67,16 @@ const PackageCard = ({
         .then(res => res.json())
         .then(data => {
           console.log('Google reviews response:', data);
-          setGoogleReviews(data.reviews || []);
+          // Ensure we always have an array for reviews
+          const reviews = Array.isArray(data.reviews) ? data.reviews : [];
+          setGoogleReviews(reviews);
+          
           if (data.error) {
             console.warn('Google reviews API issue:', data.error);
+          }
+          
+          if (reviews.length > 0) {
+            console.log(`✅ Found ${reviews.length} Google reviews`);
           }
         })
         .catch(err => {
@@ -89,13 +96,17 @@ const PackageCard = ({
         .then(res => res.json())
         .then(data => {
           console.log(`User reviews response for ${pkg._id}:`, data);
+          // Ensure we always have an array to prevent map errors
           if (Array.isArray(data)) {
             setUserReviews(data);
             if (data.length > 0) {
               console.log(`✅ Found ${data.length} user reviews for package ${pkg._id}`);
             }
+          } else if (data && data.error) {
+            console.warn('User reviews API error:', data.error);
+            setUserReviews([]);
           } else {
-            console.warn('Unexpected user reviews response format:', data);
+            console.warn('Unexpected user reviews response format:', data, typeof data);
             setUserReviews([]);
           }
         })
@@ -461,8 +472,8 @@ const PackageCard = ({
               <div className="bg-blue-50 border border-blue-200 rounded p-3 mt-2 max-h-60 overflow-y-auto">
                 <div className="text-xs text-blue-600 font-medium mb-2">🌐 Google Reviews</div>
                 {loadingGoogleReviews && <div className="text-xs text-gray-500">Loading Google reviews...</div>}
-                {!loadingGoogleReviews && googleReviews.length === 0 && <div className="text-xs text-gray-500">No Google reviews found.</div>}
-                {!loadingGoogleReviews && googleReviews.map((review, idx) => (
+                {!loadingGoogleReviews && (!Array.isArray(googleReviews) || googleReviews.length === 0) && <div className="text-xs text-gray-500">No Google reviews found.</div>}
+                {!loadingGoogleReviews && Array.isArray(googleReviews) && googleReviews.map((review, idx) => (
                   <div key={idx} className="mb-3 border-b border-blue-100 pb-2 last:border-b-0 last:pb-0">
                     <div className="flex items-center mb-1">
                       <span className="font-semibold text-sm mr-2">{review.name}</span>
@@ -494,8 +505,8 @@ const PackageCard = ({
               <div className="bg-green-50 border border-green-200 rounded p-3 mt-2 max-h-60 overflow-y-auto">
                 <div className="text-xs text-green-600 font-medium mb-2">👥 User Reviews</div>
                 {loadingUserReviews && <div className="text-xs text-gray-500">Loading user reviews...</div>}
-                {!loadingUserReviews && userReviews.length === 0 && <div className="text-xs text-gray-500">No user reviews yet. Be the first to review!</div>}
-                {!loadingUserReviews && userReviews.map((review, idx) => (
+                {!loadingUserReviews && (!Array.isArray(userReviews) || userReviews.length === 0) && <div className="text-xs text-gray-500">No user reviews yet. Be the first to review!</div>}
+                {!loadingUserReviews && Array.isArray(userReviews) && userReviews.map((review, idx) => (
                   <div key={idx} className="mb-3 border-b border-green-100 pb-2 last:border-b-0 last:pb-0">
                     <div className="flex items-center mb-1">
                       <span className="font-semibold text-sm mr-2">{review.userName || 'Anonymous'}</span>

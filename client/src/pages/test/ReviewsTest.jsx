@@ -28,10 +28,22 @@ const ReviewsTest = () => {
 
     try {
       const response = await axios.get(`/api/feedback/package/${packageId}`);
-      setUserReviews(response.data);
-      addLog(`✅ User reviews API success: ${response.data.length} reviews found`, 'success');
+      console.log('User reviews API response:', response.data);
+      
+      // Handle both array responses and error objects
+      if (Array.isArray(response.data)) {
+        setUserReviews(response.data);
+        addLog(`✅ User reviews API success: ${response.data.length} reviews found`, 'success');
+      } else if (response.data && response.data.error) {
+        addLog(`❌ User reviews API error: ${response.data.error}`, 'error');
+        setUserReviews([]);
+      } else {
+        addLog(`⚠️ Unexpected response format: ${typeof response.data}`, 'warning');
+        setUserReviews(Array.isArray(response.data) ? response.data : []);
+      }
     } catch (error) {
       addLog(`❌ User reviews API error: ${error.message}`, 'error');
+      setUserReviews([]);
       console.error('User reviews error:', error);
     } finally {
       setLoading(false);
@@ -187,10 +199,10 @@ const ReviewsTest = () => {
           ) : (
             <div className="space-y-3">
               <div className="text-sm text-gray-600 mb-3">
-                Found {userReviews.length} reviews
+                Found {Array.isArray(userReviews) ? userReviews.length : 0} reviews
               </div>
               <div className="max-h-64 overflow-y-auto">
-                {userReviews.length === 0 ? (
+                {!Array.isArray(userReviews) || userReviews.length === 0 ? (
                   <p className="text-gray-500">No user reviews found</p>
                 ) : (
                   userReviews.map((review, index) => (
@@ -222,7 +234,7 @@ const ReviewsTest = () => {
                 )}
               </div>
               <div className="max-h-64 overflow-y-auto">
-                {!googleReviews.reviews || googleReviews.reviews.length === 0 ? (
+                {!Array.isArray(googleReviews.reviews) || googleReviews.reviews.length === 0 ? (
                   <div>
                     <p className="text-gray-500 mb-2">No Google reviews found</p>
                     {googleReviews.error && (
